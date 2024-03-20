@@ -1,0 +1,451 @@
+@import "../base/common.scss";
+
+.banner-event {
+  background: $white;
+  border-radius: 35px;
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+}
+// banner-event-01-1
+
+.banner-event-01-1 {
+  margin-left: 12px;
+  margin-right: 12px;
+  align-items: center;
+  border-radius: 30px;
+  height: 106px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  .banner-event-left {
+    margin-left: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+  .banner-event-center {
+    margin-left: 10px;
+    flex: 1 0 0%;
+    .title {
+      @include pre-body-03-bold;
+      color: $black;
+    }
+    .banner-event-title {
+      @include pre-body-03-bold;
+      color: $black;
+    }
+    .banner-event-day {
+      @include pre-body-04-reg;
+      color: $black;
+      margin-top: 2px;
+    }
+  }
+  .banner-event-right {
+    margin-left: 20px;
+    margin-right: 24px;
+    float: right;
+    .btn-smail {
+      background: $black;
+      box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+      border-radius: 30px;
+      color: $white;
+      @include pre-body-05-bold;
+      text-align: center;
+      color: $white;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      border: none;
+      //cursor: pointer;
+      padding: 5px 8px;
+      margin: 0;
+      width: 46px;
+    }
+  }
+}
+/**/
+// img-banner-01
+.img-banner-01 {
+  margin-left: 12px;
+  margin-right: 12px;
+  background: #ffffff;
+  border-radius: 35px;
+  display: block;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    //filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+  }
+  .pageindicator-num {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/**/
+// banner-01
+.banner {
+  .txt-title {
+    margin: 0 24px;
+    width: 230px;
+    h1 {
+      @include font-package(
+        "T Universe Sans TTF",
+        normal,
+        500,
+        32px,
+        36px,
+        -1px
+      );
+      color: $black;
+    }
+    .txt-sub {
+      margin-top: 8px;
+      color: $black;
+      @include font-package("Pretendard", normal, "", 14px, 20px, -1px);
+      display: flex;
+      align-items: center;
+      width: 230px;
+      i {
+        &.ico-ai {
+          background: url("../../image/icon/ico-ai.png");
+          background-repeat: no-repeat;
+          background-size: 42px 18px;
+          display: inherit;
+          width: 42px;
+          min-width: 42px;
+          height: 18px;
+          margin-right: 4px;
+        }
+        &.ico-info {
+          background: url("../../image/icon/ico-info.png");
+          background-repeat: no-repeat;
+          background-size: 18px 18px;
+          display: inherit;
+          width: 18px;
+          min-width: 18px;
+          height: 18px;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+  &-01 {
+    .txt-info {
+      margin: 20px 24px 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .price {
+        p {
+          color: $black;
+          @include font-package("Pretendard", normal, 700, 12px, 14px, -0.72px);
+          .txt-dday {
+            margin-left: 2px;
+          }
+        }
+        .info-product-hor-3 {
+          margin-top: 2px;
+          p {
+            &.txt-price {
+              color: $black;
+              @include font-package(
+                "Pretendard",
+                normal,
+                700,
+                16px,
+                20px,
+                -1px
+              );
+              .txt-firstmonth {
+                color: $blue-dark;
+              }
+              .txt-sale-price {
+                margin-left: 2px;
+              }
+              .txt-period {
+                margin-left: 2px;
+                @include font-package(
+                  "Pretendard",
+                  normal,
+                  700,
+                  12px,
+                  14px,
+                  -1px
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.package {
+  overflow: hidden;
+  padding-bottom: 60px;
+  .txt {
+    margin: 0 24px;
+    width: 230px;
+    h1 {
+      @include font-package(
+        "T Universe Sans TTF",
+        normal,
+        500,
+        32px,
+        36px,
+        -1px
+      );
+      color: $black;
+    }
+    .txt-sub {
+      margin-top: 20px;
+      color: $black;
+      @include font-package("Pretendard", normal, "", 14px, 20px, -1px);
+      display: flex;
+      align-items: center;
+      i {
+        &.ico-info {
+          background: url("../../image/icon/ico-info.png");
+          background-repeat: no-repeat;
+          background-size: 18px 18px;
+          display: inherit;
+          width: 18px;
+          min-width: 18px;
+          height: 18px;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+  .package {
+    border-radius: 30px;
+    background: $white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-right: 12px;
+    margin-left: 12px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+  .txt-title {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 15px;
+    .txt-main {
+      @include font-package("Pretendard", normal, 700, 18px, 24px, -1px);
+      display: -webkit-box;
+      color: $black;
+      margin-top: 5px;
+      width: 230px;
+      .txt-keyword {
+        max-width: 201px;
+        margin-right: 2px;
+        @include hiddenLine(1);
+      }
+    }
+    .txt-sub {
+      @include font-package("Pretendard", normal, 500, 12px, 14px, -1px);
+      color: $black;
+    }
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px 15px 24px;
+    .info-product-hor-3 {
+      .txt-price {
+        margin-bottom: 7px;
+        color: $black;
+        .txt-sale-price {
+          @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+          margin-right: 2px;
+        }
+        .txt-period {
+          @include font-package("Pretendard", normal, 700, 12px, 14px, -1px);
+        }
+      }
+    }
+  }
+  .pageindicator {
+    justify-content: center;
+  }
+  &-img {
+    .area-img {
+      height: 264px;
+      display: flex;
+      justify-content: end;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  &-list {
+    .swipe {
+      height: 100%;
+      display: inline-flex;
+      overflow: hidden;
+      transform: translateX(0);
+      transition: transform 0.3s ease-out;
+      cursor: grab;
+      .swipe-item {
+        width: 336px;
+      }
+    }
+    .list {
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      height: 264px;
+
+      .product {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        .info-product-hor-1 {
+          .txt-brand {
+            color: $dark-gray;
+            @include font-package("Pretendard", normal, 500, 12px, 14px, -1px);
+            max-width: 230px;
+            display: flex;
+            margin-bottom: 2px;
+            span {
+              display: block;
+              max-width: 124px;
+              @include hiddenLine(1);
+            }
+          }
+          .txt-name {
+            @include font-package("Pretendard", normal, 700, 14px, 20px, -1px);
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner-pagenation {
+  > .pageindicator {
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+.img-banner-02 {
+  @extend .img-banner-01;
+}
+
+
+.banner-event-02-1 {
+  padding: 22px 24px;
+  border-radius: 30px;
+  background-color: #fff;
+  position: relative;
+  > * {
+    display: inline-block;
+  }
+  > .txt {
+    > h5 {
+      @include pre-body-03-bold;
+      margin-bottom: 2px;
+      width: 220px;
+    }
+    > h6 {
+      @include font-pretendard;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -1px;
+    }
+  }
+
+  > .btn-small {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    background-color: #000;
+    border-radius: 12px;
+    padding: 5px 8px;
+    > h5 {
+      color: #fff;
+      @include font-pretendard;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: -0.06em;
+    }
+  }
+}
+
+
+
+.banner-install {
+  padding: 12px 24px 12px 18px;
+  background-color: #fff;
+  position: relative;
+  font-size: 0;
+  > * {
+    display: inline-block;
+    vertical-align: top;
+  }
+  img {
+    width: 100%;
+  }
+  > .btn-filter-x {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    margin-top: 11px;
+  }
+  > .area_img_app_icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 12px;
+  }
+  > .txt {
+    width: 150px;
+    > .txt-01 {
+      @include font-package("Pretendard", normal, 700, 14px, 20px, -1px);
+    }
+    > .txt-02 {
+      @include font-package("Pretendard", normal, 500, 12px, 14px, -1px);
+    }
+  }
+  > .btn-small {
+    margin-top: 7px;
+    float: right;
+    background-color: #f6f6f6;
+    color : #000;
+  }
+}

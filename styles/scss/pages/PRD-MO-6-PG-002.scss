@@ -1,0 +1,47 @@
+@import "./Detail-Component.scss";
+@import '../../scss/components/toast_popup';
+@import "../components/popup";
+
+
+
+.popup-wrap{
+	display: none;
+	&.show{
+	  display: flex;
+	}
+	.background-overlay{
+		z-index: 1000;
+	}
+	.popup-center-02{
+
+		z-index: 1000;
+	}
+  }
+
+
+.header-main .header {
+	z-index: 999;
+}
+
+.btn-checkbox-wrap{
+
+    position: relative;
+}
+
+.list-notification {
+	.list-info {
+		.btn-dropdown-notification {
+			.list-info {
+				height: 0;
+			}
+		}
+	}
+}
+.section {
+	.detail-info-img {
+		height: 700px;
+		.bg-gradient-more {
+			bottom: 0;
+		}
+	}
+}

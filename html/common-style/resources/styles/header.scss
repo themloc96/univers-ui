@@ -1,0 +1,67 @@
+@import './common.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
+    background-color: $white_01;
+    .ui-container {
+        position: relative;
+        @include flexRow;
+        width: 100%;
+    }
+    &.header-main {
+        .ui-container {
+            height: 64px;
+            padding: 0 18px;
+        }
+    }
+    &.header-main-02 {
+        .ui-container {
+            height: 64px;
+            padding: 0 18px;
+        }
+    }
+     
+    &.header-bottomsheet .ui-container {
+        height: 60px;
+        padding: 0 20px 0 18px;
+    }
+    button {
+        font-size: 0;
+        .icon {
+            width: 28px;
+            height: 28px;
+        }
+        &.button-back {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 19px;
+            margin: auto;
+            height: max-content;
+            .icon {
+                background-image: url(../assets/icon/icon-header-back.svg);
+            }
+        }
+        &.button-close {
+            margin-left: auto;
+            .icon {
+                background-image: url(../assets/icon/icon-header-close.svg);
+            }
+        }
+    }
+
+    .header-title {
+        @include body_03_med;
+        width: 130px;
+        //max-height: 19px;
+        text-align: center;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-left: 1px;
+    }
+}

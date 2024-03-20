@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html lang="ko">
+  <head>
+    <title>MEM-MO-PG-006</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no"
+    />
+    <meta charset="utf8" />
+    <link rel="stylesheet" href="../../styles/css/MEM-MO-PG-006.css" />
+  </head>
+
+  <body>
+    <div class="container mem-mo-pg-006">
+      <!-- component : header -->
+      <div class="header-main">
+        <!-- header -->
+        <div class="header">
+          <!-- btn-header-back -->
+          <button class="btn-header-back">
+            <!-- icon-back -->
+            <i class="icon-back"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="contents">
+        <!-- component : title -->
+        <div class="title">
+          <span>
+            잠자고 있는<br />
+            계정이 있어요
+          </span>
+        </div>
+
+        <!-- component : title -->
+        <div class="sub-title">
+          <span>휴면 계정을 풀고 T 우주를 이용해 주세요</span>
+        </div>
+
+        <form>
+          <div class="form-group">
+            <div class="input-field old-account">
+              <div class="image-wrap">
+                <img src="../../image/login/img_logo_login.png" alt="" />
+              </div>
+              <!-- component : input -->
+              <div class="input-wrap">
+                <label class="form-control-label">카카오톡</label>
+                <input
+                  disabled
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  tabindex="1"
+                  value="plusx123@kakao.com"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- component : footer -->
+      <div class="btn-floating">
+        <!-- btn-main-task-login -->
+        <!--버튼 활성화 시: "bg-black" class 추가-->
+        <button type="button" class="btn-main-task-login" onclick="alertPopup()">
+          휴면 해제하기
+          <span>
+            <lottie-player src="../../image/icon/loading-animation-60-white.json" speed="1" loop autoplay background="transparent"></lottie-player>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <script src="../../scripts/mem-mo-pg-006.js"></script>
+  </body>
+</html>

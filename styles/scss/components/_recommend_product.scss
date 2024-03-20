@@ -1,0 +1,28 @@
+@import "./product";
+@import "./title";
+.recommend{
+	.scrol{
+		overflow-x: auto;
+		flex-direction: row;
+		overflow-y: hidden;
+		display: flex;
+		margin-top: 20px;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.list-product {
+			display: flex;
+			gap: 10px;
+			padding: 0 24px;
+			a {
+				cursor: pointer;
+			}
+		}
+		.btn-more-arrow-txt{
+			margin-left: 20px;
+			margin-top: 39px;
+			margin-right: 6px;
+			width: 39px;
+		}
+	}
+}

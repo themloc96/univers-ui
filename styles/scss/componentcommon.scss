@@ -1,0 +1,169 @@
+@import "./components/banner.scss";
+@import "./main.scss";
+@import "./base/common.scss";
+
+.t-component-container {
+  background-color: #fff;
+}
+.t-component-common {
+  width: auto;
+  margin: 40px 12px;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: $grey;
+  overflow: auto;
+  .guide-header {
+    .header {
+      position: relative;
+      max-width: 360px;
+      margin: unset;
+    }
+  }
+  .t-guide-title {
+    @include font-t-universe;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    color: $blue-dark;
+  }
+  .t-component-title {
+    @include pre-body-03-med;
+    width: max-content;
+    padding: 10px 0;
+    min-width: 200px;
+  }
+  .t-component {
+    padding: 20px 0;
+    position: relative;
+    max-width: 360px;
+    margin: unset;
+  }
+}
+.box-color {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 20px;
+}
+.color-white-01 {
+  background: $white;
+}
+.color-black-01 {
+  background: $black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.color-gray-01 {
+  background: $white-milk;
+}
+.color-gray-02 {
+  background: $grey-light;
+}
+.color-gray-03 {
+  background: $dark-gray;
+}
+.color-gray-04 {
+  background: $grey-light;
+}
+.color-blue {
+  background: $blue-dark;
+}
+.color-red {
+  background: $red;
+}
+// button
+.component-button {
+  .btn {
+    width: 100%;
+    margin: 20px 0;
+    height: 60px;
+  }
+  .main-task-btn-60px {
+    // height: auto !important;
+    position: initial;
+  }
+
+  button.main-task-btn-60px {
+    &:not(.disabled) {
+      background: $black;
+    }
+  }
+}
+.t-guide-content {
+  margin-top: 50px;
+}
+.component-title h1 {
+  margin-bottom: 20px;
+}
+.tabbar-bottom .tab_bottom:last-child {
+  margin-right: 0;
+}
+.component-full {
+  width: 360px;
+}
+.tabbar-bottom {
+  position: inherit;
+}
+.component-header {
+  .tab_header {
+    position: relative;
+    display: flex;
+  }
+}
+.title-header {
+  @include pre-body-03-med;
+  margin: auto;
+  color: $black;
+  min-width: 94px;
+}
+.p0 {
+  padding: 0 !important;
+}
+.component-title .sub_title {
+  margin: 12px 24px 0 24px;
+  display: flex;
+  align-items: center;
+}
+.btn-header-close {
+  margin: 20px 20px 12px 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  float: right;
+  cursor: pointer;
+}
+.icon-close {
+  background: url(../../image/icon/ico_close.png);
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+  display: inherit;
+  width: 28px;
+  height: 28px;
+}
+
+.btn-txt-arrow {
+  margin: 12px 24px 0 24px;
+  display: flex;
+  align-items: center;
+  @include pre-body-04-bold;
+  color: $black;
+
+  samp {
+    @include font-pretendard;
+    margin-right: 1px;
+  }
+  .icon {
+    background: url("../../image/icon/btn_small.png");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    display: inherit;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+a.btn-txt-arrow {
+  text-decoration: none;
+  width: fit-content;
+}

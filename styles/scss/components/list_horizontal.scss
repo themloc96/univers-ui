@@ -1,0 +1,77 @@
+@import "../base/common";
+.list-horizontal {
+	.component-title{
+		.title{
+			@include t-headline;
+      max-width:230px;
+      max-height: 64px;
+			font-size: 28px;
+			line-height: 32px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			>div{
+				display: flex;
+				gap: 5px;
+			}
+		}
+		.txt-sub{
+			margin: 8px 24px 20px 24px;
+		}
+	}
+	.list-product-scrol {
+			overflow-x: auto;
+			flex-direction: row;
+			overflow-y: hidden;
+			display: flex;
+			&::-webkit-scrollbar {
+					display: none;
+			}
+			.list-product {
+				display: flex;
+				gap: 10px;
+				padding: 0 24px;
+		}
+		.btn-more-arrow-txt{
+			margin-left: 20px;
+			margin-top: 39px;
+			margin-right: 6px;
+			width: 39px;
+			height: fit-content;
+		}
+	}
+}
+
+.background-dim{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	
+	left: 0%;
+	right : 0%;
+	bottom : 0%;
+	
+    background-color: #00000080;
+    z-index: 1000;
+	display: none;
+
+	&.second{
+		z-index: 999;
+	}
+	&.no-dim{
+		background-color: inherit;
+	}
+	&.show{
+		display: flex;
+	}
+	>.popup-bottom-noti,.popup-bottom-info-agreement{
+		position: absolute;
+		bottom : 0;
+		left: initial;
+		right: initial;
+	}
+	>img{
+		cursor: pointer;
+	}
+}

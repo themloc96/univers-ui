@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no,minimal-ui"
+    />
+    <meta name="format-detection" content="telephone=no">
+    <title>SUB-MO-8-TB-002(1)</title>
+    <link rel="stylesheet" href="../../styles/css/present.css" />
+  </head>
+
+  <body>
+
+      <div class="present present-sub-mo-8-tb-001_002_1">
+        <header>
+          <!-- header -->
+          <div class="header">
+            <!-- btn-header-back -->
+            <button class="btn-header-back">
+              <!-- icon-back -->
+              <i class="icon-back"></i>
+            </button>
+          </div>
+        </header>
+        <div class="content">
+          <main class="sub-mo-8-tb-001-1" style="display: none;">
+            <div class="tab-fixed">
+              <div class="tab-category">
+                <!-- 활성화시 div 태그에 active 클래스 추가 -->
+                <!-- <button class="active" onclick="change2receiveEmpty()"> -->
+                <button >
+                  <div class="txt"><span>받은 선물</span></div>
+                </button>
+                <!-- <button onclick="change2sendEmpty()"> -->
+                <button class="active">
+                  <div class="txt"><span>보낸 선물</span></div>
+                </button>
+              </div>
+            </div>
+            <div class="background-overlay" style="display: none"></div>
+            <div class="popup-center-01" style="display: none">
+              <img
+                src=""
+                onerror="this.style.display='none'"
+                style="display: none"
+              />
+              <div class="con-all-task-01">
+                <p class="content">이용권 코드 8자리 모두 입력해 주세요.</p>
+              </div>
+              <!-- <button
+                type="button"
+                class="btn-sub-task-48px full bg-black"
+                onclick="closePopup()"
+              > -->
+              <button type="button" class="btn-sub-task-48px full bg-black">
+                <span>확인</span>
+              </button>
+            </div>
+
+            <!--
+                  버튼은 주석 해체시 등장 
+                  input-register 에 disable 추가시 버튼 상태 변경
+              -->
+
+            <div class="input-register">
+              <label>
+                <input
+                  type="url"
+                  name=""
+                  id=""
+                  maxlength="8"
+                  inputmode="url"
+                  placeholder="선물받은 이용권 코드를 입력해 주세요"
+                />
+              </label>
+              <button>등록</button>
+            </div>
+
+            <div class="txt-empty">
+              <p>
+                아직 받은 선물이 없어요.<br />
+                먼저 소중한 사람에게 선물을 보내보는건 어떨까요?
+              </p>
+            </div>
+
+            <div class="floating-area">
+              <button class="btn-floating-gift"><i class="top"></i></button>
+            </div>
+          </main>
+
+          <main class="sub-mo-8-tb-002" >
+            <div class="tab-fixed">
+              <div class="tab-category">
+                <!-- 활성화시 div 태그에 active 클래스 추가 -->
+                <!-- <button onclick="change2recieveEmpty()"> -->
+                <button>
+                  <div class="txt"><span>받은 선물</span></div>
+                </button>
+                <!-- <button class="active" onclick="change2sendEmpty()"> -->
+                <button class="active">
+                  <div class="txt"><span>보낸 선물</span></div>
+                </button>
+              </div>
+            </div>
+            <div class="txt-empty">
+              <p>
+                아직 보낸 선물이 없어요.<br />
+                따뜻한 마음을 담아 선물해봐요!
+              </p>
+            </div>
+
+            <div class="floating-area">
+              <button class="btn-floating-gift"><i class="top"></i></button>
+            </div>
+          </main>
+        </div>
+      </div>
+
+    
+    <script
+      type="text/javascript"
+      src="../../scripts/sub-mo-8-tb-001.js"
+    ></script>
+    <script
+    type="text/javascript"
+    src="../../scripts/scrollAnim.js"
+  ></script>
+  </body>
+</html>

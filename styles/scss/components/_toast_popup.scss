@@ -1,0 +1,111 @@
+.popup-toast {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  font-family: "Pretendard";
+  max-width: 500px;
+  width: calc(100% - 20px);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  cursor: auto;
+  // width: 100%;
+  margin: 0 auto;
+  color: $white;
+  text-align: center;
+  padding: 13px 40px;
+  height: 66px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 48px;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  position: fixed;
+  opacity : 0;
+}
+
+.popup-toast-text {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  cursor: auto;
+  width: 100%;
+  margin: 20px 0;
+  color: $white;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 19px;
+  p {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  button {
+    min-width: max-content;
+    margin-left: 15px;
+  }
+}
+.popup-toast-img-1 {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 50px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  cursor: auto;
+  width: 100%;
+  margin: 20px 0;
+  color: $white;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 18px 15px 30px;
+  p {
+    //margin-top: 18px;
+    //margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    min-width: 222px;
+    min-height: 40px;
+  }
+  .thumb-product-o{
+    background-color: $white;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 52px;
+    height: 52px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.show {
+  top: inherit;
+  top: 0;
+  .btn {
+    opacity: 100;
+  }
+}

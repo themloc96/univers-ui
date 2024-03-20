@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>MEM-MO-PG-004</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../../styles/css/MEM-MO-PG-004.css" />
+</head>
+
+<body>
+    <!-- component : tab header -->
+    <div class="tab-header">
+        <button class="btn-header-back" onclick="ConfirmAlert('회원가입을 중단하고 나가실 건가요?')"><i class="icon-back"></i></button>
+    </div>
+
+    <div class="contents mem-mo-pg-004">
+        <div class="container login">
+
+            <!-- component : title -->
+            <h1 class="title">
+                서비스 이용 전</br>
+                약관 동의가</br>
+                필요해요
+            </h1>
+
+            <ul>
+                <!-- component : checkbox -->
+                <li class="title-option">
+                    <input type="checkbox" class="selectAll"/>
+                    <div class="txt-option">
+                        <span>전체 동의하기</span>
+                    </div>
+                </li>
+
+                <!-- component : checkbox -->
+                <li class="option">
+                    <input type="checkbox" class="required"/>
+                    <div class="txt-option">
+                        <span>[필수] T 우주 서비스 이용 약관 동의</span>
+                    </div>
+                    
+                </li>
+
+                <!-- component : checkbox -->
+                <li class="option">
+                    <input type="checkbox" class="required"/>
+                    <div class="txt-option">
+                        <span>[필수] 개인정보 수집 및 이용 동의</span>
+                    </div>
+                    
+                </li>
+
+                <!-- component : checkbox -->
+                <li class="option">
+                    <input type="checkbox" />
+                    <div class="txt-option">
+                        <span>[선택] 프로모션 정보 수신 동의</span>
+                    </div>
+                    
+                </li>
+            </ul>
+            <form class="form">
+
+                <!-- component : button -->
+                <div class="btn-bottom-background">
+                    <button type="button" class="btn-main-task-login btn-submit">동의하고 시작하기
+                        <span>
+                            <lottie-player src="../../image/icon/loading-animation-60-white.json" speed="1" loop autoplay background="transparent"></lottie-player>
+                          </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../../scripts/mem-mo-pg-004.js"></script>
+</body>
+
+</html>

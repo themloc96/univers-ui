@@ -1,0 +1,649 @@
+@import "../layout/header";
+@import "../base/style";
+@import "../base/font";
+@import "../base/common";
+@import "../abstracts/spacing";
+@import "../components/layout";
+@import "../components/banner";
+@import "../components/buttons";
+@import "../components/popup_dropdown";
+@import "../components/input";
+@import "../components/icon";
+@import "../components/toast_popup";
+@import "../components/popup";
+@import "../components/checkbox";
+
+
+
+body{
+  height: calc(100% - 64px) !important;
+}
+
+.popup-wrap{
+	display: none;
+	&.show{
+	  display: flex;
+	}
+	.background-overlay{
+		z-index: 1000;
+	}
+	.popup-center-02{
+
+		z-index: 1000;
+	}
+}
+
+main {
+  &.cmp-mo-6-pg-001 {
+    margin-top: 78px;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 72px);
+    .tab-fixed {
+      // margin-bottom: 3px;
+    }
+    .dropdown-filter {
+      margin-left: 12px;
+      margin-right: 12px;
+      margin-top: 30px;
+      .btn-dropdown {
+        border-radius: 18px;
+        background: $white-milk;
+        padding: 16px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .txt {
+          color: $black;
+          @include font-package("Pretendard", normal, 700, 14px, 20px, -1px);
+          .txt-date {
+          }
+          .txt-product {
+          }
+        }
+        .btn-arrow-small {
+          border: none;
+          background-color: transparent;
+          i {
+            background: url("../../image/icon/btn_small.png");
+            transform: rotate(90deg);
+            background-repeat: no-repeat;
+            background-size: 14px 14px;
+            display: inherit;
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+    .btn-check-txt {
+      margin-top: 30px;
+      margin-left: 23px;
+      margin-right: 24px;
+      span {
+        margin-left: 6px;
+        color: var(--main-color-black-01, #000);
+        font-size: 14px;
+        font-family: Pretendard;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -1px;
+      }
+    }
+    .list-inquiry {
+      margin-top: 20px;
+      margin-bottom: 70px;
+      .inquiry {
+        &-my-locked {
+          padding: 20px 24px;
+          .info-date-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 17px;
+            display: flex;
+            align-items: center;
+            p {
+              height: 17px;
+              display: flex;
+              align-items: center;
+              span {
+                @include font-package(
+                  "Pretendard",
+                  normal,
+                  500,
+                  12px,
+                  14px,
+                  -1px
+                );
+                &.txt-date {
+                  color: $black;
+                }
+                &.txt-name {
+                  color: $blue-dark;
+                  margin-left: 8px;
+                }
+              }
+            }
+          }
+          .info-detail {
+            margin-top: 10px;
+            .txt-type-product {
+              display: flex;
+              align-items: center;
+              @include font-package(
+                "Pretendard",
+                normal,
+                500,
+                12px,
+                14px,
+                -1px
+              );
+              .txt-type {
+                color: $black;
+              }
+              .txt-product {
+                color: $dark-gray;
+                margin-left: 4px;
+              }
+            }
+          }
+          .info {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            i {
+              background: url("../../image/icon/ico_lock.png");
+              background-repeat: no-repeat;
+              background-size: 20px 20px;
+              display: inherit;
+              width: 20px;
+              min-width: 20px;
+              height: 20px;
+            }
+            .txt-title {
+              color: $black;
+              @include font-package(
+                "Pretendard",
+                normal,
+                700,
+                14px,
+                20px,
+                -1px
+              );
+            }
+          }
+
+          &.active{
+            background-color: #F6F6F6;
+            .txt-info{
+              display: block;
+            }
+            .btn{
+              display: flex;
+            }
+            .txt-reply{
+              display: block;
+            }
+          }
+
+
+
+        }
+        &-locked {
+          padding: 20px 24px;
+          .info-date-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 17px;
+            display: flex;
+            align-items: center;
+            p {
+              height: 17px;
+              display: flex;
+              align-items: center;
+              span {
+                @include font-package(
+                  "Pretendard",
+                  normal,
+                  500,
+                  12px,
+                  14px,
+                  -1px
+                );
+                &.txt-date {
+                  color: $black;
+                }
+                &.txt-name {
+                  margin-left: 8px;
+                }
+              }
+            }
+          }
+          .info-detail {
+            margin-top: 10px;
+            .txt-type-product {
+              display: flex;
+              align-items: center;
+              @include font-package(
+                "Pretendard",
+                normal,
+                500,
+                12px,
+                14px,
+                -1px
+              );
+              .txt-type {
+                color: $black;
+              }
+              .txt-product {
+                color: $dark-gray;
+                margin-left: 4px;
+              }
+            }
+          }
+          .info {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            i {
+              background: url("../../image/icon/ico_lock.png");
+              background-repeat: no-repeat;
+              background-size: 20px 20px;
+              display: inherit;
+              width: 20px;
+              min-width: 20px;
+              height: 20px;
+            }
+            .txt-title {
+              color: $black;
+              @include font-package(
+                "Pretendard",
+                normal,
+                700,
+                14px,
+                20px,
+                -1px
+              );
+            }
+          }
+
+          &.active{
+            background-color: #F6F6F6;
+            .txt-info{
+              display: block;
+            }
+            .btn{
+              display: flex;
+            }
+            .txt-reply{
+              display: block;
+            }
+          }
+
+
+
+
+        }
+        &-my-disclosure {
+          padding: 20px 24px;
+          .info-date-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 17px;
+            display: flex;
+            align-items: center;
+            p {
+              height: 17px;
+              display: flex;
+              align-items: center;
+              span {
+                @include font-package(
+                  "Pretendard",
+                  normal,
+                  500,
+                  12px,
+                  14px,
+                  -1px
+                );
+                &.txt-date {
+                  color: $black;
+                }
+                &.txt-name {
+                  color: $blue-dark;
+                  margin-left: 8px;
+                }
+              }
+            }
+          }
+          .info-detail {
+            margin-top: 10px;
+            .txt-type-product {
+              display: flex;
+              align-items: center;
+              @include font-package(
+                "Pretendard",
+                normal,
+                500,
+                12px,
+                14px,
+                -1px
+              );
+              .txt-type {
+                color: $black;
+              }
+              .txt-product {
+                color: $dark-gray;
+                margin-left: 4px;
+              }
+            }
+          }
+          .info {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            i {
+              background: url("../../image/icon/ico_lock.png");
+              background-repeat: no-repeat;
+              background-size: 20px 20px;
+              display: inherit;
+              width: 20px;
+              min-width: 20px;
+              height: 20px;
+            }
+            .txt-title {
+              color: $black;
+              @include font-package(
+                "Pretendard",
+                normal,
+                700,
+                14px,
+                20px,
+                -1px
+              );
+            }
+          }
+        }
+        &-disclosure {
+          padding: 20px 24px;
+          .info-date-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 17px;
+            display: flex;
+            align-items: center;
+            p {
+              height: 17px;
+              display: flex;
+              align-items: center;
+              span {
+                @include font-package(
+                  "Pretendard",
+                  normal,
+                  500,
+                  12px,
+                  14px,
+                  -1px
+                );
+                &.txt-date {
+                  color: $black;
+                }
+                &.txt-name {
+                  margin-left: 8px;
+                }
+              }
+            }
+          }
+          .info-detail {
+            margin-top: 10px;
+            .txt-type-product {
+              display: flex;
+              align-items: center;
+              @include font-package(
+                "Pretendard",
+                normal,
+                500,
+                12px,
+                14px,
+                -1px
+              );
+              .txt-type {
+                color: $black;
+              }
+              .txt-product {
+                color: $dark-gray;
+                margin-left: 4px;
+              }
+            }
+          }
+          .info {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            i {
+              background: url("../../image/icon/ico_lock.png");
+              background-repeat: no-repeat;
+              background-size: 20px 20px;
+              display: inherit;
+              width: 20px;
+              min-width: 20px;
+              height: 20px;
+            }
+            .txt-title {
+              color: $black;
+              @include font-package(
+                "Pretendard",
+                normal,
+                700,
+                14px,
+                20px,
+                -1px
+              );
+            }
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+      }
+      .line {
+        background: $white-milk;
+        height: 1px;
+        width: auto;
+        margin: 0 24px;
+      }
+
+
+      .txt-product{
+        width: calc(100% - 75px);
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+      .txt-title{
+        width: calc(100% - 32px);
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+
+    .txt-info{
+      @include pre-body-04-reg;
+      margin-top:4px;
+      display: none;
+      flex-direction: column;
+    }
+    .btn{
+      display: none;
+      border: none;
+      background: transparent;
+      padding: 0;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 20px;
+      button{
+        @include pre-body-05-med;
+        border: none;
+        background: transparent;
+        color: $dark-gray;
+      }
+      .column{
+        width: 1px;
+        height: 8px;
+        background: $dark-gray;
+        margin: 0 10px;
+      }
+    }
+
+
+
+
+    }
+    .group-btn-floating{
+      // position: relative;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      height: 100px;
+      .btn-floating-write {
+        background: rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: none;
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+        right: 24px;
+        bottom: 22px;
+        left: auto;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        .write {
+          background: url("../../image/icon/ico-write-small.png");
+          background-repeat: no-repeat;
+          background-size: 30px 30px;
+          display: inherit;
+          width: 30px;
+          min-width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .btn-dd-floating {
+      position: absolute;
+      margin-bottom: 10px;
+      bottom: 72px;
+      right: 24px;
+      // display: none;
+      // animation: marquee 0.3s forwards;
+      opacity: 0;
+      transition : opacity 0.5s;
+    }
+  } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes marquee {
+	0% {
+		bottom : 24px;
+    opacity: 0;
+	}
+	100% {
+		bottom: 72px ;
+    opacity: 1;
+	}
+}
+
+
+
+
+.btn-bottomsheet-filter{
+  font-size: 0;
+  input{
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  span{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+}
+
+
+
+
+.txt-reply{
+  padding: 30px 0 0 0;
+  color: $black;
+  display: none;
+
+  .txt-title {
+    margin-top: 10px;
+    color: $black;
+    @include font-package(
+      "Pretendard",
+      normal,
+      700,
+      14px,
+      20px,
+      -1px
+    );
+  }
+
+  .txt-date{
+    @include pre-body-05-med;
+    margin-top:0;
+  }
+
+  >.title{
+    padding-top: 10px;
+    @include pre-body-05-med;
+  }
+  >.sub{
+    padding-top: 4px;
+    @include pre-body-04-reg;
+  }
+}
+
+
+
+
+.header, .tab-fixed{
+  animation-duration: 2s;
+}
+

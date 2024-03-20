@@ -1,0 +1,38 @@
+@import "../base/style";
+@import "../base/common.scss";
+@import "../components/layout";
+@import "../base/font";
+@import "../layout/header";
+@import "../components/popup_dropdown";
+
+.tab-header {
+  padding: 0;
+}
+.header-wrap {
+  display: flex;
+}
+.transparent {
+  background: none;
+}
+.title-header {
+  @include pre-body-03-med;
+  text-align: center;
+  margin: auto;
+  color: $black;
+  min-width: 94px;
+}
+.btn-back-wrap {
+  width: 0%;
+}
+a.btn-back-link {
+  display: flex;
+}
+a {
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+.p0 {
+  padding: 0;
+}

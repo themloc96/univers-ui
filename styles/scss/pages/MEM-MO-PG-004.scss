@@ -1,0 +1,103 @@
+@import "../components/buttons";
+@import "../base/common.scss";
+@import '../base/style';
+@import '../base/font';
+@import '../components/checkbox';
+
+
+// <link rel="stylesheet" href="../../styles/css/style.css" />
+// <link rel="stylesheet" href="../../styles/css/font.css" />
+// <link rel="stylesheet" href="../../styles/css/checkbox.css" />
+
+.mem-mo-pg-004 {
+  ul {
+    padding: 46px 12px 0 12px;
+    margin: 0;
+    li {
+      list-style: none;
+      position: relative;
+      display: flex;
+    }
+    li.title-option {
+      height: 48px;
+      align-items: center;
+      padding-left: 12px;
+      cursor: pointer;
+      width: fit-content;
+    }
+  }
+  .option {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-left: 12px;
+    .txt-option {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-left: 16px;
+      width: calc(100% - 40px);
+      &::after {
+        content: "";
+        background: url("../../image/icon/btn_small.png");
+        background-repeat: no-repeat;
+        background-size: 14px 14px;
+        display: inherit;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        right: 18px;
+        bottom: 0;
+        top: 0;
+        cursor: pointer;
+        margin: auto 0;
+      }
+      span {
+        @include pre-body-04-reg;
+        display: flex;
+        align-items: center;
+        padding: 10px 54px 10px 0;
+      }
+    }
+  }
+  .ico-checked {
+    background: url("../../image/icon/ico_check_selected.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    display: inherit;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .ico-check-default {
+    background: url("../../image/icon/ico_check_default.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    display: inherit;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .ico-btn-small {
+    background: url("../../image/icon/btn_small.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    display: inherit;
+    width: 20px;
+    height: 20px;
+  }
+  .title-option {
+    @include pre-body-03-bold;
+    color: $black;
+    margin-bottom: 4px;
+    .txt-option {
+      margin: 15px 0 14px 16px;
+    }
+  }
+  .btn-submit {
+    width: 336px;
+    padding: 21px 116px 20px 114px;
+    // margin-left: -1px;
+  }
+}

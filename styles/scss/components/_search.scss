@@ -1,0 +1,130 @@
+@import "../base/common.scss";
+
+$font-family_1: "Pretendard";
+
+/* search default */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+.input-search-gray-1{
+  margin: 8px 12px 12px 12px;
+  display: flex;
+  position: relative;
+  input {
+    background: #EEEEEE;
+    border-radius: 18px;
+    @include pre-body-03-med;
+    color: $black;
+    border: none;
+    padding: 16px 92px 16px 24px;
+    width: 100%;
+    &:focus-visible {
+      outline: none;
+    }
+    &::placeholder {
+      color: $dark-gray;
+    }
+  }
+  button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: transparent;
+  }
+  
+  .btn-input-search {
+    right: 20px;
+    top: 14px;
+    cursor: pointer;
+    i{
+      background: url("../../image/icon/btn_input_search.png");
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      display: inherit;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .btn-input-x {
+    right: 52px;
+    top: 18px;
+    display: none;
+    i{
+      background: url("../../image/icon/btn_x.png");
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      display: inherit;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.input-search-gray-2{
+  margin: 8px 12px 12px 12px;
+  display: flex;
+  position: relative;
+  input {
+    background: #F6F6F6;
+    border-radius: 18px;
+    @include pre-body-03-med;
+    color: $black;
+    border: none;
+    padding: 16px 92px 16px 24px;
+    width: 100%;
+    &:focus-visible {
+      outline: none;
+    }
+    &::placeholder {
+      color: $dark-gray;
+    }
+  }
+  button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: transparent;
+  }
+  
+  .btn-input-search {
+    right: 20px;
+    top: 14px;
+    cursor: pointer;
+    i{
+      background: url("../../image/icon/btn_input_search.png");
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      display: inherit;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .btn-input-x {
+    right: 52px;
+    top: 18px;
+    display: none;
+    i{
+      background: url("../../image/icon/btn_x.png");
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      display: inherit;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.btn-input-x.show-x{
+  display: block;
+}
+// .btn-input-x {
+//   display: block;
+// }
+// input:placeholder-shown + .btn-input-x {
+//   display: none;
+// }

@@ -1,0 +1,130 @@
+@import "../base/common.scss";
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 24px 0 24px;
+  @include t-headline;
+  margin: 0;
+  text-align: left;
+  color: $black;
+}
+
+.btn-txt-arrow {
+  margin: 12px 24px 0 24px;
+  display: flex;
+  align-items: center;
+  @include pre-body-04-bold;
+  color: $black;
+
+  samp {
+    @include font-pretendard;
+    margin-right: 1px;
+  }
+  .icon {
+    background: url("../../image/icon/btn_small.png");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    display: inherit;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+a.btn-txt-arrow {
+  text-decoration: none;
+  width: fit-content;
+}
+.component-title {
+  .title {
+      @include t-title-01;
+      color: $black;
+      max-width: 230px;
+      padding-top: 0;
+      padding-right: 0;
+      overflow: hidden;
+      padding: 0;
+      margin-left: 24px;
+  }
+  .txt-sub {
+      display: flex;
+      align-items: center;
+      margin: 8px 24px 20px 24px;
+      p {
+          max-height: 20px;
+          max-width: 230px;
+          overflow: hidden;
+          display: contents;
+          span {
+              @include pre-body-04-reg;
+              color: $black;
+              max-height: 20px;
+              max-width: 230px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              &.name{
+                max-width: 50px;
+              }
+              &.category{
+                max-width: 100%;
+                margin-right:1px;
+              }
+              &.percentage{
+                max-width: 18px;
+                margin-left:1px;
+              }
+              &.num{
+                max-width: 20px;
+              }
+              &.brand{
+                max-width: 124px;
+                margin-left:2px;
+              }
+          }
+          span.sub {
+              max-width: 20px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              display: block;
+              overflow: hidden;
+          }
+          span.txt-percentage {
+              margin-left: 1px;
+              max-width: 18px;
+              overflow: hidden;
+          }
+          span{
+            &.txt-brand{
+              margin-left: 1px;
+              max-width: 115px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              display: block;
+              overflow: hidden;
+            }
+          }
+      }
+  }
+  .icon {
+      background: url("../../image/icon/ico-info.png");
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      display: inherit;
+      width: 18px;
+      min-width: 18px;
+      height: 18px;
+      margin-right: 4px;
+  }
+  .ico-ai {
+      background: url("../../image/icon/ico-ai.png");
+      background-repeat: no-repeat;
+      background-size: 42px 18px;
+      display: inherit;
+      width: 42px;
+      min-width: 42px;
+      height: 18px;
+      margin-right: 4px;
+  }
+}

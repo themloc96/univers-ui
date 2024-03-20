@@ -1,0 +1,119 @@
+@import "../base/style";
+@import "../base/font";
+@import "../components/popup_dropdown";
+@import "../base/common.scss";
+
+.popup-dropdown.show {
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .popup-dropdown-body {
+    position: absolute;
+    width: 100%;
+    min-height: 284px;
+    left: 0;
+    bottom: 0px;
+    background: $white;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 0px 0px;
+    z-index: 999;
+    padding: 0;
+    opacity: 1;
+  }
+}
+.popup-dropdown-body.open {
+  height: 456px;
+  .terms-select {
+    .input-select {
+      padding: 0px 0px 18px 16px;
+      height: auto;
+      .select-item {
+        &:last-child {
+          margin-bottom: 0px !important;
+        }
+        height: 40px;
+        .btn-icon {
+          margin-right: 20px;
+          margin-top: 25px;
+          margin-bottom: 25px;
+        }
+        &:not(.heading) {
+          display: flex;
+          visibility: visible;
+        }
+      }
+      .select-item.heading {
+        margin-bottom: 0;
+        height: 64px;
+      }
+    }
+  }
+}
+.terms-select {
+  margin-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 116px;
+}
+.popup-dropdown-body {
+  .terms-select {
+    .input-select {
+      border: none;
+      background: $white-milk;
+      @include pre-body-04-reg;
+      border-radius: 20px;
+      height: 64px;
+      padding: 20px 20px 20px 16px;
+      .select-item {
+        @include pre-body-04-reg;
+        align-items: center;
+        color: $black;
+        height: 24px;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: space-between;
+        &:not(.heading) {
+          display: none;
+          visibility: hidden;
+        }
+        .select-item-text {
+          margin-right: 16px;
+          margin-left: 16px;
+          text-align: left;
+          flex-grow: 1;
+          @include pre-body-04-reg;
+          display: flex;
+          align-items: center;
+          color: $black;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          cursor: pointer;
+        }
+        .btn-icon {
+          margin-top: 25px;
+          margin-right: 0px;
+          margin-bottom: 25px;
+        }
+      }
+      .select-item.heading {
+        margin-bottom: 30px;
+        .select-item-text {
+          @include pre-body-04-reg;
+          display: flex;
+          align-items: center;
+          color: $black;
+          margin-top: 22px;
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+  .btn-bottom-background {
+    height: 116px;
+    .main-task-btn-60px.btn-active {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html lang="ko">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no,minimal-ui"
+    />
+    <meta charset="utf8" />
+    <title>SUB-MO-3-TB-001a</title>
+    <link rel="stylesheet" href="../../styles/css/SUB-MO-3-TB-001a.css" />
+  </head>
+  <body>
+    
+    
+    <main class="sub-mo-3-tb-001a">
+      
+        <!-- component : header-home -->
+        <div class="header-home">
+          <a class="btn-home-cart"><i></i><label>2</label></a>
+        </div>
+
+        <!-- component : input search -->
+        <div class="top">
+          <h1 class="title">
+            나만의 구독을<br />
+            시작해보세요
+          </h1>
+          <div class="btn-toggle" onclick="toggleSwich()">
+            <button class="on"><span>유형별</span></button>
+            <button class="off"><span>상품별</span></button>
+          </div>
+        </div>
+
+
+        <div class="card_product-category">
+          <div class="item">
+            <a href="#" class="acnchor"></a>
+              <p class="txt_category">할인 바코드</p>
+              <p class="txt_sub">결제할 때마다 할인받아요</p>
+
+          </div>
+          <div class="item">
+            <a href="#" class="acnchor"></a>
+              <p class="txt_category">쿠폰</p>
+              <p class="txt_sub">자주 쓸수록 할인 쿠폰 챙겨야죠</p>
+
+          </div>
+          <div class="item">
+            <a href="#" class="acnchor"></a>
+              <p class="txt_category">정기배송</p>
+              <p class="txt_sub">한 번쯤은 알아서 챙겨 받아 보세요</p>
+
+          </div>
+          <div class="item">
+            <a href="#" class="acnchor"></a>
+              <p class="txt_category">이용권</p>
+              <p class="txt_sub">이왕 쓰는 거 저렴하게 구독해요</p>
+
+          </div>
+          <div class="item">
+            <a href="#" class="acnchor"></a>
+              <p class="txt_category">그 외</p>
+              <p class="txt_sub">이런 것도 구독이 됩니다!</p>
+
+          </div>
+          <div class="item">
+            <a href="#" class="acnchor"></a>
+              <p class="txt_category">패밀리 멤버</p>
+              <p class="txt_sub">이미 구독한 거 필요한 사람과 나눠써요</p>
+
+          </div>
+        </div>
+
+        <div class="tabbar-bottom">
+          <!-- btn-tabbar-01 active -->
+          <a class="btn-tabbar btn-tabbar-01" href="../subscribe/DSP-MO-2-PG-001a.html">
+            <div class="icon">
+            </div>
+            <span>발견</span>
+          </a>
+          <!-- btn-tabbar-02 -->
+          <a class="btn-tabbar btn-tabbar-02 active" href="../use/SUB-MO-3-TB-001a.html">
+            <div class="icon">
+            </div>
+            <span>이용</span>
+          </a>
+          <!-- btn-tabbar-03 -->
+          <a class="btn-tabbar btn-tabbar-03" href="../category/DSP-MO-4-PG-001.html">
+            <div class="icon">
+            </div>
+            <span>카테고리</span>
+          </button>
+          <!-- btn-tabbar-04 -->
+          <a class="btn-tabbar btn-tabbar-04">
+            <div class="icon">
+            </div>
+            <span>나의 구독</span>
+          </a>
+        </div>
+    </main>
+
+
+    <script>
+
+
+      function toggleSwich(){
+        var onToggle = document.querySelector(".btn-toggle .on")
+        var offToggle = document.querySelector(".btn-toggle .off")
+
+
+        onToggle.classList.remove("on");
+        onToggle.classList.add("off");
+        offToggle.classList.remove("off");
+        offToggle.classList.add("on");
+
+        const leftBtn = document.querySelectorAll('.btn-toggle button')[0];
+        const items = document.querySelectorAll('.item');
+        const family = items[items.length - 1];
+        
+        if (leftBtn.classList.contains('off')) {
+          family.style.display = 'block';
+        }else {
+          family.style.display = 'none';
+        }
+      }
+      
+      window.onload = function() {
+        const leftBtn = document.querySelectorAll('.btn-toggle button')[0];
+        const items = document.querySelectorAll('.item');
+        const family = items[items.length - 1];
+        if (leftBtn.classList.contains('off')) {
+          family.style.display = 'block';
+        }else {
+          family.style.display = 'none';
+        }
+      }
+
+    </script>
+    
+  </body>
+</html>

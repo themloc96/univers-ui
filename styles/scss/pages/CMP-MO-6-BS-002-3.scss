@@ -1,0 +1,32 @@
+@import "../layout/header";
+@import "../base/style";
+@import "../base/font";
+@import "../base/common";
+@import "../abstracts/spacing";
+@import "../components/layout";
+@import "../components/banner";
+@import "../components/buttons";
+@import "../components/popup_dropdown";
+@import "../components/input";
+@import "../components/icon";
+@import "../components/toast_popup";
+
+main {
+  .CMP-MO-6-BS-002-3 {
+    &.popup-dropdown {
+      .popup-dropdown-body {
+        .txt-title {
+          color: $black;
+          @include font-package("Pretendard", normal, 700, 18px, 24px, -1px);
+          padding: 0 24px;
+        }
+      }
+      ul {
+        &.listOptions {
+          height: 477px;
+          overflow: scroll;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1078 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap";
+.badge-num {
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  background: #3617ce;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  justify-content: center;
+  width: 18px;
+  height: 17px;
+}
+.badge-num .total {
+  font-family: "T Universe Sans TTF";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* page */
+html {
+  touch-action: pan-y;
+}
+
+body {
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* 모바일 브라우저에서 뷰포트의 높이를 디바이스 높이와 동일하게 설정 */
+@media screen and (max-width: 360px) {
+  html,
+  body {
+    height: -webkit-fill-available; /* iOS */
+    height: -moz-available; /* Android */
+    height: fill-available; /* Chrome, Firefox, Opera */
+  }
+}
+.tab-header {
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 64px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 24px 0 24px;
+  font-family: "T Universe Sans TTF";
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -1px;
+  text-align: left;
+  color: #000000;
+}
+
+.contents {
+  padding-top: 64px;
+  overflow: auto;
+}
+
+.btn-header-back {
+  margin: 18px 0 18px 18px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent !important;
+  padding: 0;
+  display: inherit;
+  cursor: pointer;
+}
+.btn-header-back .icon-back {
+  background: url("../../image/icon/btn_header_back.png");
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+  display: inherit;
+  width: 28px;
+  height: 28px;
+}
+
+.btn {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #ffffff;
+  width: auto;
+  padding: 20px;
+  background: #a0a0a0;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-active {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #ffffff;
+  width: auto;
+  padding: 20px;
+  background: #000000;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  caret-color: #3617ce;
+}
+
+.page {
+  background: #f6f6f6;
+  height: calc(100vh - 60px);
+  width: 100%;
+  overflow-y: auto;
+}
+
+.btn-select {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inherit;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inherit;
+  cursor: pointer;
+}
+
+.btn-select.active {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inherit;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inherit;
+  cursor: pointer;
+}
+
+.select-item .btn-select .icon-check {
+  background: url("../../image/icon/icon_check.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  display: inherit;
+  width: 24px;
+  height: 24px;
+  background: url("../../image/icon/icon_check.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  display: inherit;
+  width: 24px;
+  height: 24px;
+}
+
+.select-item.checked .btn-select .icon-check {
+  background: url("../../image/icon/icon_check_active.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  display: inherit;
+  width: 24px;
+  height: 24px;
+  background: url("../../image/icon/icon_check_active.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  display: inherit;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-right {
+  background: url("../../image/icon/icon_right.png");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inherit;
+  width: 14px;
+  height: 14px;
+  background: url("../../image/icon/icon_right.png");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inherit;
+  width: 14px;
+  height: 14px;
+}
+
+.icon-top {
+  background: url("../../image/icon/icon_top.png");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inherit;
+  width: 14px;
+  height: 14px;
+  background: url("../../image/icon/icon_top.png");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inherit;
+  width: 14px;
+  height: 14px;
+}
+
+.icon-bottom {
+  background: url("../../image/icon/icon_bottom.png");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inherit;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inherit;
+  width: 14px;
+  height: 14px;
+}
+
+.form * {
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.input-select {
+  border: none;
+  background: #f6f6f6;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  border-radius: 20px;
+  height: 60px;
+  padding: 20px 20px 20px 20px;
+  border: none;
+  background: #f6f6f6;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  border-radius: 20px;
+  height: 60px;
+  padding: 20px 20px 20px 20px;
+}
+.input-select .select-item {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -1px;
+  color: #000000;
+  height: 24px;
+  margin-bottom: 16px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -1px;
+  color: #000000;
+  height: 24px;
+  margin-bottom: 16px;
+}
+.input-select .select-item .select-item-text {
+  margin-left: 0px;
+  text-align: left;
+  flex-grow: 1;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-left: 0px;
+  text-align: left;
+  flex-grow: 1;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+.input-select .select-item .btn-icon {
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inherit;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inherit;
+  cursor: pointer;
+}
+
+.ml-4 {
+  margin-left: 4px;
+  margin-left: 4px;
+}
+
+.none {
+  display: none;
+  visibility: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.mg-left-right-12 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+@font-face {
+  font-family: "T Universe Sans TTF";
+  src: url("../fonts/T-Universe-Sans-TTF/fwt/TUniverseSansTTF-cMd.ttf") format("truetype");
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "T Universe Sans TTF";
+  src: url("../fonts/T-Universe-Sans-TTF/fwt/TUniverseSansTTF-dBd.ttf") format("truetype");
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  src: url("../fonts/Pretendard/Pretendard-Thin.otf");
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  src: url("../fonts/Pretendard/Pretendard-ExtraLight.otf");
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  src: url("../fonts/Pretendard/Pretendard-Light.otf");
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: url("../fonts/Pretendard/Pretendard-Regular.otf");
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  src: url("../fonts/Pretendard/Pretendard-Medium.otf");
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  src: url("../fonts/Pretendard/Pretendard-SemiBold.otf");
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  src: url("../fonts/Pretendard/Pretendard-Bold.otf");
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  src: url("../fonts/Pretendard/Pretendard-ExtraBold.otf");
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  src: url("../fonts/Pretendard/Pretendard-Black.otf");
+  -webkit-font-smoothing: antialiased;
+}
+.badge-num {
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  background: #3617ce;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  justify-content: center;
+  width: 18px;
+  height: 17px;
+}
+.badge-num .total {
+  font-family: "T Universe Sans TTF";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  margin: 0;
+}
+
+button:not(disabled) {
+  cursor: pointer;
+}
+
+
+.btn {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  cursor: pointer;
+  text-align: center;
+  color: #ffffff;
+  width: auto;
+  padding: 20px;
+  background: #a0a0a0;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+
+.main-task-btn {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #ffffff;
+  width: auto;
+  padding: 20px;
+  background: #a0a0a0;
+  border-radius: 35px;
+  border: none;
+  position: absolute;
+  border: none;
+  height: 60px;
+  bottom: calc(env(safe-area-inset-bottom) + 32px);
+  left: 12px;
+  right: 12px;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+}
+.main-task-btn:active {
+  transform: scale(0.97);
+}
+.main-task-btn.bg-black {
+  background: #000000;
+  cursor: pointer;
+}
+.main-task-btn.bg-black:active {
+  background: rgb(25, 25, 25);
+}
+.main-task-btn:disabled {
+  cursor: auto;
+}
+.main-task-btn:disabled:active {
+  transform: none;
+}
+
+.btn-header-back {
+  margin: 18px 0 18px 18px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inherit;
+}
+.btn-header-back .icon-back {
+  background: url("../../image/icon/btn_header_back.png");
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+  display: inherit;
+  width: 28px;
+  height: 28px;
+}
+
+.btn-active {
+  background: #000000;
+  cursor: pointer;
+}
+.btn-active:active {
+  background: rgb(25, 25, 25);
+  transform: scale(0.97);
+}
+
+.btn-loading {
+  background: #000000;
+}
+
+.btn-cover {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  cursor: pointer;
+  text-align: center;
+  color: #ffffff;
+  width: auto;
+  padding: 20px;
+  background: #a0a0a0;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.btn-fixed-bottom {
+  position: absolute;
+  border: none;
+  height: 60px;
+  bottom: calc(env(safe-area-inset-bottom) + 32px);
+  left: 12px;
+  right: 12px;
+}
+.btn-fixed-bottom.active {
+  background: #000000;
+  cursor: pointer;
+}
+.btn-fixed-bottom.active:active {
+  background: rgb(25, 25, 25);
+  transform: scale(0.97);
+}
+
+.btn.btn-outline {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+.main-task-btn.btn-loading {
+  background-image: url("../../image/icon/loading_animation_120_2.gif") !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-color: #000000 !important;
+}
+
+/* 2023.05.12 추가 */
+.btn-floating {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  height: 130px;
+}
+
+button.btn-small {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -1px;
+  border: none;
+  background: #000000;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+  border-radius: 30px;
+  color: #ffffff;
+  padding: 5px 8px;
+  margin-left: 15px;
+}
+
+.btn-txt-arrow {
+  margin: 12px 24px 0 24px;
+  display: flex;
+  align-items: center;
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  color: #000000;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.btn-txt-arrow samp {
+  font-family: "Pretendard";
+  margin-right: 1px;
+  width: 172px;
+}
+.btn-txt-arrow .btn-arrow-small {
+  background: url("../../image/icon/btn_small.png");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inherit;
+  width: 14px;
+  height: 14px;
+}
+
+button.btn-txt-arrow {
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.btn-header-close {
+  margin: 20px 20px 12px 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  float: right;
+  cursor: pointer;
+}
+
+.badge-num {
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  background: #3617ce;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  justify-content: center;
+  width: 18px;
+  height: 17px;
+}
+.badge-num .total {
+  font-family: "T Universe Sans TTF";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.popup-dropdown {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.popup-dropdown .background {
+  height: 100%;
+  background: #000000;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: table;
+  min-width: auto;
+  min-height: auto;
+  z-index: 101;
+  width: 100%;
+  opacity: 0.5;
+}
+.popup-dropdown .head {
+  height: 60px;
+}
+.popup-dropdown .btn-header-close {
+  margin: 20px 20px 12px 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  float: right;
+  cursor: pointer;
+}
+.popup-dropdown .icon-close {
+  background: url("../../image/icon/ico_close.png");
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+  display: inherit;
+  width: 28px;
+  height: 28px;
+}
+.popup-dropdown .popup-title {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -1px;
+  color: #000000;
+  margin: 0 24px;
+}
+.popup-dropdown ul {
+  list-style-type: none;
+  margin: 20px 12px 0 12px;
+  padding: 0;
+}
+.popup-dropdown li.active {
+  border-radius: 20px;
+  color: #000000;
+}
+.popup-dropdown li .checked {
+  display: none;
+  visibility: hidden;
+}
+.popup-dropdown li.active .checked {
+  display: block;
+  visibility: visible;
+}
+.popup-dropdown li {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  color: #a0a0a0;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-dropdown.show {
+  display: block;
+}
+.popup-dropdown.show .body {
+  padding: 0;
+  background: #ffffff;
+  opacity: 1;
+  height: 500px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 102;
+  width: 100%;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 30px 30px 0px 0px;
+  height: 489px;
+}
+.popup-dropdown.show * {
+  box-sizing: border-box;
+}
+.popup-dropdown.show .popup-dropdown-body {
+  position: absolute;
+  width: 100%;
+  min-height: 284px;
+  left: 0;
+  bottom: 0px;
+  background: #ffffff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 30px 30px 0px 0px;
+  z-index: 999;
+  padding: 0;
+  opacity: 1;
+}
+
+.popup-dropdown-body.open {
+  height: 462px;
+}
+.popup-dropdown-body.open .terms-select .input-select {
+  padding: 0px 0px 18px 16px;
+  height: auto;
+}
+.popup-dropdown-body.open .terms-select .input-select .select-item {
+  height: 40px;
+}
+.popup-dropdown-body.open .terms-select .input-select .select-item:last-child {
+  margin-bottom: 0px !important;
+}
+.popup-dropdown-body.open .terms-select .input-select .select-item .btn-icon {
+  margin-right: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.popup-dropdown-body.open .terms-select .input-select .select-item:not(.heading) {
+  display: flex;
+  visibility: visible;
+}
+.popup-dropdown-body.open .terms-select .input-select .select-item.heading {
+  margin-bottom: 0;
+  height: 64px;
+}
+
+.terms-select {
+  margin-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 116px;
+}
+
+.btn-txt-dropdown {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background: none;
+  border: none;
+  align-items: center;
+}
+
+.popup-dropdown-body .terms-select .input-select {
+  border: none;
+  background: #f6f6f6;
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  border-radius: 20px;
+  height: 64px;
+  padding: 20px 20px 26px 16px;
+}
+.popup-dropdown-body .terms-select .input-select .select-item {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  align-items: center;
+  color: #000000;
+  height: 24px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.popup-dropdown-body .terms-select .input-select .select-item:not(.heading) {
+  display: none;
+  visibility: hidden;
+}
+.popup-dropdown-body .terms-select .input-select .select-item .select-item-text {
+  margin-right: 16px;
+  margin-left: 16px;
+  text-align: left;
+  flex-grow: 1;
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.popup-dropdown-body .terms-select .input-select .select-item .btn-icon {
+  margin-top: 25px;
+  margin-right: 0px;
+  margin-bottom: 25px;
+}
+.popup-dropdown-body .terms-select .input-select .select-item.heading {
+  margin-bottom: 30px;
+}
+.popup-dropdown-body .terms-select .input-select .select-item.heading .select-item-text {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+.popup-dropdown-body .btn-bottom-background {
+  height: 116px;
+}
+.popup-dropdown-body .btn-bottom-background .main-task-btn.btn-active {
+  width: auto;
+}
+
+.popup-full {
+  display: none;
+  background: #ffffff;
+}
+.popup-full.show {
+  display: block;
+  background: #ffffff;
+  opacity: 1;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.popup-full .contents {
+  height: 100vh;
+}
+.popup-full .form {
+  margin-top: 30px;
+}
+.popup-full .form .detail {
+  height: calc(100vh - 254px);
+  width: 100%;
+  margin-top: 31px !important;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.popup-full .heading {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  color: #000000;
+}
+.popup-full .txt {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  color: #000000;
+  margin-top: 19px;
+  padding-bottom: 64px;
+}
+
+.popup-toast {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 20px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  cursor: auto;
+  width: 100%;
+  margin: 20px 0;
+  color: #ffffff;
+  text-align: center;
+  padding: 13px 40px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-toast-text {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 20px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  cursor: auto;
+  width: 100%;
+  margin: 20px 0;
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 19px;
+}
+.popup-toast-text p {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.popup-toast-text button {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.show {
+  top: inherit;
+  top: 60px;
+}
+.show .btn {
+  opacity: 100;
+}
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+body * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.contents {
+  padding-top: 0px;
+  overflow: auto;
+}
+
+.form {
+  margin-top: 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex_column {
+  flex-direction: column !important;
+}
+
+.ui-mem-mo-pu-002 {
+  padding: 60px 10px 0 10px;
+}/*# sourceMappingURL=UI-MEM-MO-PU-002.css.map */

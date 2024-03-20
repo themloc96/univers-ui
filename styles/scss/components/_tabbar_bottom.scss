@@ -1,0 +1,114 @@
+@import "../base/common.scss";
+
+.tabbar-bottom {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.24);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 0 calc(env(safe-area-inset-bottom));
+  z-index: 100;
+  max-width: 520px;
+  margin : 0 auto;
+
+  a{
+    &:first-child{
+      width: 103px;
+    }
+    &:last-child{
+      width: 103px;
+    }
+  }
+
+
+
+
+}
+
+.btn-tabbar {
+  cursor: pointer;
+  min-width: max-content;
+  text-align: center;
+  justify-content: center;
+  // display: flex;
+  opacity: 0.3;
+  -webkit-opacity: 0.3;
+  border: none;
+  width: 68px;
+  height: 64px;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  // backdrop-filter: blur(20px);
+  &:last-child {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  &.active {
+    opacity: 1;
+    -webkit-opacity: 1;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  span {
+    @include t-etc-badge-bold-02;
+    text-align: center;
+    color: $black;
+    margin-top: 4px;
+    display: block;
+    padding-bottom: 13px;
+  }
+  .tab-label {
+    background: $blue-dark;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    @include t-etc-badge;
+    text-align: center;
+    color: $white;
+    padding: 3px 4px;
+    position: absolute;
+    bottom: 55px;
+    z-index: 101;
+  }
+  &.btn-tabbar-01 .icon {
+    background-image: url(../../image/icon/ico-tab-discover.png);
+  }
+  &.btn-tabbar-02 .icon {
+    background-image: url(../../image/icon/ico-tab-subscription.png);
+  }
+  &.btn-tabbar-03 .icon {
+    background-image: url(../../image/icon/ico-tab-category.png);
+  }
+  &.btn-tabbar-04 .icon {
+    background-image: url(../../image/icon/ico-tab-my.png);
+  }
+}
+
+.tabbar-bottom .btn-tabbar:first-child {
+  padding-left: 35px;
+}
+
+.tabbar-bottom .btn-tabbar:last-child {
+  margin-right: 0;
+  padding-right: 35px;
+}

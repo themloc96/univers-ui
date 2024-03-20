@@ -1,0 +1,32 @@
+.icon {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inherit;
+}
+.icon.icon-check-active {
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-image: url("../../image/icon/icon_check_active.png");
+  display: inherit;
+  height: 24px;
+}
+.icon-right {
+  background: url("../../image/icon/icon_right.png");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inherit;
+  width: 14px;
+  height: 14px;
+}
+
+.icon-close {
+  background: url(../../image/icon/ico_close.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inherit;
+  width: 28px;
+  height: 28px;
+}

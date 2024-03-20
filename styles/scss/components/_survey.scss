@@ -1,0 +1,295 @@
+.survey {
+  .txt-title {
+    width: 230px;
+    .txt-main {
+      @include font-package("T Universe Sans TTF", normal, 500, 32px, 36px, -1px);
+      color: $black;
+      padding: 0 12px;
+    }
+  }
+  .txt-sub {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 12px;
+    i {
+      background: url("../../image/icon/ico-info.png");
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      display: inherit;
+      width: 18px;
+      min-width: 18px;
+      height: 18px;
+      margin-right: 4px;
+    }
+    span {
+      @include font-package("Pretendard", normal, "", 14px, 20px, -1px);
+      color: $black;
+    }
+  }
+
+  .survey-case-1{
+    display: none;
+    &.show{
+      display: block;
+    }
+  }
+  .survey-case-2{
+    display: none;
+    &.show{
+      display: block;
+    }
+  }
+  .survey-case-3{
+    display: none;
+    &.show{
+      display: block;
+    }
+  }
+
+  .survey-list {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .btn-survey-option {
+    position: relative;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background: $white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 12px 24px 12px 30px;
+    border: none;
+    &.disable-gray{
+      padding: 15px 20px 15px 30px;
+      
+    }
+    &.default {
+      .txt-option {
+        color: $black;
+        @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+        z-index: 1;
+        position: relative;
+        width: 200px;
+        @include hiddenLine(1);
+      }
+      i {
+        display: inherit;
+        width: 26px;
+        min-width: 26px;
+        height: 26px;
+        &.ico-like {
+          background: url("../../image/icon/ico-like.png");
+          background-repeat: no-repeat;
+          background-size: 26px 26px;
+        }
+        &.ico-dis-like {
+          background: url("../../image/icon/ico-dis-like.png");
+          background-repeat: no-repeat;
+          background-size: 26px 26px;
+        }
+      }
+    }
+    &.disable-stroke {
+
+      font-family: 'Pretendard';
+      position: relative;
+      padding: 13px 18px 13px 28px;
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 120px;
+      //   height: 100%;
+      //   border-radius: 30px;
+      //   background: $blue-dark;
+      // }
+      .txt-option {
+        @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+        z-index: 1;
+        position: relative;
+        // color: $white;
+        width: 200px;
+        @include hiddenLine(1);
+      }
+      .progess-bar {
+        border-radius: 30px;
+        height: 50px;
+        width: 120px;
+        padding-left: 28px;
+        z-index: 9;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        left: 0;
+        right: 0;
+        top: -2px;
+        bottom: 0;
+        background: $blue-dark;
+        color: $white;
+        clip-path: inset(0 0 0 0);
+        -webkit-clip-path: inset(0 0 0 0);
+        transition: clip-path 1s linear;
+        p {
+          width: 150px;
+          white-space: nowrap;
+          overflow: hidden;
+          @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+          // @include hiddenLine(1);
+        }
+      }
+      .txt-percentage {
+        width: 50px;
+        z-index: 10;
+        text-align: right;
+        @include hiddenLine(1);
+        p {
+          @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+        }
+      }
+    }
+    &.disable-gray {
+      position: relative;
+      border-radius: 30px;
+      background-color: rgba(160, 160, 160, 0.10000000149011612);
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 71px;
+        height: 100%;
+        border-radius: 30px;
+        opacity: 0.11999999731779099;
+        background: $dark-gray;
+      }
+      .txt-option {
+        color: $black;
+        @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+        z-index: 1;
+        position: relative;
+        width: 200px;
+        @include hiddenLine(1);
+      }
+      .txt-percentage {
+        text-align: right;
+        width: 50px;
+        @include hiddenLine(1);
+        color: $dark-gray;
+        @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+      }
+    }
+    &.selected {
+      border: 2px solid var(--main-color-black-01, #000);
+      padding: 10px 22px 10px 28px;
+      &.disable-stroke{
+        overflow: hidden;
+        padding: 10px 18px 10px 28px;
+      }
+    }
+  }
+  .txt-loading {
+    margin-top: 50px;
+    .txt {
+      & > p {
+        color: var(--main-color-black-01, #000);
+        text-align: center;
+      }
+      & > p:first-child {
+        font-size: 16px;
+        font-family: Pretendard;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -1px;
+      }
+      & > p:last-child {
+        margin-top: 2px;
+        font-size: 14px;
+        font-family: Pretendard;
+        line-height: 20px;
+        letter-spacing: -1px;
+      }
+    }
+    .loading {
+      display: flex;
+      justify-content: center;
+      .loading-animation-70-blue {
+        background-image: url(../../image/icon/loading-animation-70-blue.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 56px;
+        width: 56px;
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  .result {
+    .thumb-product-s {
+      overflow: inherit;
+      margin-top: 20px;
+      border-radius: 30px;
+      background: $white;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
+        width: 36px;
+        height: 6px;
+        background-image: url("../../image/icon/vector.png");
+        background-repeat: no-repeat;
+        background-size: 36px 6px;
+        position: absolute;
+        display: inherit;
+        top: -6px;
+        left: 62px;
+      }
+      .product {
+        display: flex;
+        align-items: center;
+        margin: 21px 43px 20px 24px;
+        width: calc(100% - 67px);
+        cursor: pointer;
+      }
+      .info-product-hor-1 {
+        margin-left: 14px;
+        @include font-package("Pretendard", normal, 700, 14px, 20px, -1px);
+        .txt-brand {
+          @include hiddenLine(1);
+          max-width: 175px;
+          @include font-package("Pretendard", normal, 500, 12px, 14px, -1px);
+          color: $dark-gray;
+        }
+        .txt-name {
+          color: $black;
+        }
+        .txt-price {
+          margin-top: 2px;
+          .txt-percentage {
+            color: $blue-dark;
+          }
+          .txt-sale-price {
+            margin-left: 2px;
+            color: $black;
+          }
+          .txt-period {
+            margin-left: 2px;
+            @include font-package("Pretendard", normal, 700, 12px, 14px, -1px);
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}

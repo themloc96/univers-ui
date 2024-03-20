@@ -1,0 +1,122 @@
+.package-keyword{
+	.component-title{
+		.title{
+			@include t-headline;
+      max-width:230px;
+      max-height: 64px;
+			font-size: 28px;
+			line-height: 32px;
+			overflow: hidden;
+		}
+		.txt-sub{
+			margin: 8px 24px 20px 24px;
+		}
+	}
+	.card{
+		position: relative;
+		background: $white;
+		border-radius: 30px;
+		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+		display: flex;
+		flex-direction: column;
+		margin: 0 12px;
+		.keywords{
+			margin: 64px 0;
+			row-gap: 36px;
+			display: flex;
+			flex-direction: column;
+			.keyword{
+				display: flex;
+				margin: 0 24px;
+				justify-content: space-between;
+				&.right{
+					.txt-keyword{
+						order: 1;
+						text-align: right;
+					}
+				}
+				.txt-keyword{
+					p{
+						@include pre-title-04;
+						color: $black;
+						width: 100px;
+					}
+				}
+				.img-logo-txt{
+					width: 170px;
+					border-radius: 60px;
+					background: $white;
+					box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.16);
+					backdrop-filter: blur(20px);
+					display: flex;
+    			padding: 11px 0 11px 9px;
+					gap: 9px;
+					.img-logo{
+						width: 40px;
+						height: 40px;
+						border-radius: 50%;
+						background: rgba(0, 0, 0, 0.03);
+						img{
+							width: 100%;
+							height: 100%;
+						}
+					}
+					.txt{
+						width: 94px;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						p{
+							text-overflow: ellipsis;
+							overflow: hidden;
+							white-space: nowrap;
+						}
+						.txt-brand{
+							@include pre-body-04-bold;
+							color: $black;
+						}
+						.txt-benefit{
+							@include pre-body-05-bold;
+							color: $dark-gray;
+						}
+					}
+				}
+			}
+		}
+		.info-product {
+			display: flex;
+			margin: 0 24px 24px 24px;
+			height: 44px;
+			justify-content: space-between;
+			align-items: center;
+			.info-product-hor-3 {
+					.txt-price {
+							display: flex;
+							gap: 2px;
+							.txt-01 {
+									@include pre-body-03-bold;
+									color: $blue-dark;
+							}
+							.txt-02 {
+									@include pre-body-03-bold;
+									color: $black;
+							}
+							.txt-03 {
+									@include pre-body-05-bold;
+									color: $black;
+									margin-top: 4px;
+									margin-bottom: 2px;
+							}
+					}
+			}
+			.badge-product{
+				margin-top: 7px;
+				display: flex;
+				align-items: flex-start;
+				padding: 0px;
+				gap: 3px;
+				flex-wrap: wrap;
+			}
+		}
+	}
+}

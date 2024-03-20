@@ -1,0 +1,36 @@
+@import "../layout/header";
+@import "../components/popup_dropdown";
+@import "../base/style";
+@import "../base/font";
+@import "../base/common";
+@import "../components/_category_menu_scroll";
+@import "../components/list_category";
+@import "../components/tabbar_bottom";
+@import "../components/banner";
+@import "../components/search";
+
+.main {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 64px);
+  padding-top: 75px;
+}
+
+.img-banner-01{
+  margin-bottom: 70px;
+}
+
+.page {
+  height: auto;
+}
+
+
+.tabbar-bottom{
+  a.btn-tabbar{
+    width: 84px;
+    &:nth-child(4){
+      width : 104px;
+    }
+    &:nth-child(4){
+      width : 104px;
+    }
+  }
+}

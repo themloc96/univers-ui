@@ -1,0 +1,104 @@
+@import "../layout/header";
+@import "../base/style";
+@import "../base/font";
+@import "../base/common";
+@import "../components/layout";
+@import "../components/buttons";
+@import '../components/popup_dropdown';
+@import "../components/checkbox";
+
+.slider{
+	margin: 86px 24px 0 24px;
+	// display: grid;
+  //   justify-content: center;
+	.txt-result-default{
+		display: flex;
+    justify-content: center;
+		margin-bottom: 36px;
+		p{
+			width: 240px;
+			@include pre-body-03-bold;
+			text-align: center;
+			
+		}
+	}
+	.range{
+		width: 100%;
+		.range-slider {
+			height: 4px;
+			position: relative;
+			background: #EEEEEE;
+			.range-selected {
+				height: 100%;
+				left: 0%;
+				right: 0%;
+				position: absolute;
+				background: $black;
+				backdrop-filter: blur(12.5px);
+			}
+		}
+		.range-input{
+			position: relative;
+			input{
+				position: absolute;
+				width: 100%;
+				height: 5px;
+				top: -5px;
+				background: none;
+				pointer-events: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				&::-webkit-slider-thumb {
+					height: 16px;
+					width: 16px;
+					border-radius: 4px;
+					background: $black;
+					pointer-events: auto;
+					-webkit-appearance: none;
+				}
+				 &::-moz-range-thumb {
+					height: 16px;
+					width: 16px;
+					border-radius: 4px;
+					background: $black;
+					pointer-events: auto;
+					-moz-appearance: none;
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+.btn-main-task{
+	bottom : calc(env(safe-area-inset-bottom) + 18px);
+	&.disabled{
+		background: #eee;
+	}
+}
+
+
+.popup-bottomsheet {
+	.body{
+		.list-button{
+			.btn-bottomsheet-filter{
+				span{
+					transition: color 0.1s cubic-bezier(0.45, 0, 0.55, 1);
+				}
+			}
+		}
+	}
+}   
+
+
+.tab-fixed {
+	.tab-category{
+		button{
+			span {
+				transition: color 0.1s cubic-bezier(0.45, 0, 0.55, 1);
+			}
+		}
+	}
+}  

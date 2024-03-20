@@ -1,0 +1,75 @@
+@import "../abstracts/spacing";
+@import "../base/common.scss";
+@import "../base/font";
+@import "../components/layout";
+@import "../layout/header";
+@import "../components/buttons";
+@import "../components/title";
+@import "../components/select";
+@import "../components/popup_dropdown";
+
+/*
+<link rel="stylesheet" href="../../styles/css/font.css" />
+<link rel="stylesheet" href="../../styles/css/layout.css" />
+<link rel="stylesheet" href="../../styles/css/header.css" />
+<link rel="stylesheet" href="../../styles/css/button.css" />
+<link rel="stylesheet" href="../../styles/css/title.css" />
+<link rel="stylesheet" href="../../styles/css/select.css" />
+/**/
+
+@import "../components/_layout";
+@import "../components/popup_dropdown";
+.mem-mo-pg-002 {
+  .terms {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .form {
+    margin-top: 22px;
+    .detail {
+      // opacity: 0.3;
+      height: calc(100vh - 254px);
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+  .heading {
+    @include pre-body-03-bold;
+    color: $black;
+  }
+  .txt {
+    @include pre-body-04-reg;
+    color: $black;
+  }
+  .popup-full {
+    &.show {
+      position: inherit;
+    }
+  }
+}
+
+.title{
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -1px;
+  font-weight: 500;
+}
+
+select.form-control {
+  border: none;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  color: #000000;
+  background: #f6f6f6;
+  height: 20px;
+  margin: 0px;
+  background: url(../../image/icon/btn_down.png) no-repeat right #f6f6f6;
+  -webkit-appearance: none;
+  background-size: 20px 20px;
+  display: inherit;
+  width: 100%;
+}

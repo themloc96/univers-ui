@@ -1,0 +1,266 @@
+.pass_01,.pass_02 {
+	.component-title{
+		.title{
+			@include t-headline;
+			max-width:230px;
+			max-height: 64px;
+			font-size: 28px;
+			line-height: 32px;
+			overflow: hidden;
+		}
+		.txt-sub{
+			margin: 8px 24px 20px 24px;
+		}
+	}
+	.card {
+			cursor: pointer;
+			margin: 0 12px;
+			border-radius: 30px;
+			display: flow-root;
+			position: relative;
+			z-index: 1;
+			box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+			filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
+			&.not-txt-sub{
+				.txt-title{
+					.txt-sub{
+						display: none;
+					}
+				}
+				.list{
+					margin-top: 54px;
+				}
+			}
+			.txt-title {
+					border-radius: 35px 35px 0 0;
+					padding-top: 40px;
+					padding-left: 24px;
+					background: #fff;
+					i {
+							background: url("../../image/icon/badge-pass.png");
+							background-repeat: no-repeat;
+							background-size: 34px 17px;
+							display: inherit;
+							width: 34px;
+							min-width: 34px;
+							height: 17px;
+					}
+					p {
+							margin-top: 2px;
+							@include pre-title-02;
+							max-width: 142px;
+							text-overflow: ellipsis;
+							overflow: hidden;
+							white-space: nowrap;
+
+					}
+					.txt-sub{
+						@include pre-body-05-med;
+						color: $dark-gray;
+						margin-top: 5px;
+						.txt-num{
+							margin-right: 2px;
+							margin-left: 2px;
+							max-width: 8px;
+						}
+					}
+			}
+			.img-pass-cover {
+				width: 160px;
+				height: 144px;
+				position: absolute;
+				right: 0;
+				top: -43px;
+				img {
+						width: 100%;
+						height: 100%;
+				}
+			}
+			.list {
+					background: #fff;
+					// gap: 11px;
+					display: grid;
+					padding: 35px 24px 15px 24px;
+					.maskingarea{
+						row-gap: 16px;
+						display: flex;
+						flex-direction: column;
+							// position: relative;
+							// height: 56px;
+							// // position: relative;
+							// margin-bottom: 16px;
+							// overflow-y: hidden;
+							// &::-webkit-scrollbar {
+							// 		display: none;
+							// }
+							// .product {
+							// 		display: none; 
+							// 		position: absolute;
+							// 		transform: translateY(100%);
+							// 		// display: none; 
+							// 		// opacity: 0;
+							// 		// position: absolute;
+							// 		width: 100%;
+							// 		// &.active{
+							// 		//     display: flex; 
+							// 		//     opacity: 1;
+							// 		// }
+							// 		.info-product-hor {
+							// 				transform: translateY(20px);
+							// 		}
+							// }
+					}
+					.product {
+							display: flex; 
+							justify-content: space-between;
+							align-items: center;
+							height: 56px;
+							cursor: pointer;
+							&.add{
+								margin-top: 16px;
+							}
+							.img-text {
+									display: flex;
+									align-items: center;
+									.img-logo {
+											width: 48px;
+											height: 48px;
+											min-width: 48px;
+											// margin-top: 4px;
+											// margin-bottom: 4px;
+											img {
+													width: 100%;
+													height: 100%;
+											}
+									}
+									.info-product-hor {
+											margin-left: 18px;
+											// margin-right: 20px;
+											max-width: 170px;
+											.txt-brand {
+													@include pre-body-05-med;
+													color: $dark-gray;
+													text-overflow: ellipsis;
+													overflow: hidden;
+													white-space: nowrap;
+													width: 170px;
+											}
+											.txt-name {
+													@include pre-body-04-bold;
+													color: $black;
+													margin-top: 2px;
+													text-overflow: ellipsis;
+													display: -webkit-box;
+													-webkit-line-clamp: 2;
+													-webkit-box-orient: vertical;
+													overflow: hidden;
+													width: 170px;
+											}
+									}
+							}
+							.badge-product-num {
+									background: rgba(0, 0, 0, 0.7);
+									-webkit-backdrop-filter: blur(2.5px);
+									backdrop-filter: blur(2.5px);
+									border-radius: 10px;
+									margin-top: 22px;
+									margin-bottom: 17px;
+									span {
+											margin: 3px 5px;
+											@include t-etc-badge-bold-02;
+											color: $white;
+											white-space: nowrap;
+											display: flex;
+									}
+							}
+					}
+			}
+			.cut {
+					width: 100%;
+					// margin-top: 16px;
+					height: 25px;
+					// margin-bottom: 22px;
+					display: flex;
+					align-items: center;
+					hr {
+						border-style: dotted none none;
+						background-size: 2px 2px;
+							border-color: #D9D9D9;
+							width: 100%;
+					}
+					// .left{
+					//     width: 5px;
+					//     height: 25px;
+					//     background: #000000;
+					// }
+					// .right{
+					//     width: 5px;
+					//     height: 25px;
+					//     background: #000000;
+					// }
+					&::before {
+							content: "";
+							background: linear-gradient(to bottom, #232526, #414345);
+
+						}
+					>img{
+						width: 100%;
+						height: 100%;
+					}
+			}
+			.info {
+					background: #fff;
+					display: flex;
+					padding: 16px 24px 24px 24px;
+					border-radius: 0px 0px 35px 35px;
+					height: 84px;
+					justify-content: space-between;
+					align-items: center;
+					.info-product-hor {
+							.txt-price {
+									display: flex;
+									gap: 2px;
+									.txt-01 {
+											@include pre-body-03-bold;
+											color: $blue-dark;
+									}
+									.txt-02 {
+											@include pre-body-03-bold;
+											color: $black;
+									}
+									.txt-03 {
+											@include pre-body-05-bold;
+											color: $black;
+											margin-top: 4px;
+											margin-bottom: 2px;
+									}
+							}
+					}
+					.badge-product{
+						margin-top: 7px;
+						display: flex;
+						align-items: flex-start;
+						padding: 0px;
+						gap: 3px;
+						flex-wrap: wrap;
+					}
+
+					.btn-add-plus-txt{
+						width: 97px;
+						position: relative;
+						i{
+							width: 16px;
+							height: 16px;
+							background-repeat: no-repeat;
+							background-size: 16px 16px;
+							display: inline-block;
+							top : 9px;
+							right : 10px;
+							position: absolute;
+						}
+					}
+
+			}
+	}
+}

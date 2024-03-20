@@ -1,0 +1,244 @@
+.card-gift-received {
+  padding: 30px 0px 30px;
+  //width: 336px;
+  background: $white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  // height: 447px;
+  height: auto;
+
+  .card {
+    &.card-love {
+      .tmp-img {
+        background-color: #ff4572;
+      }
+    }
+
+    &.card-cheering {
+      .tmp-img {
+        background-color: #ffb800;
+      }
+    }
+
+    &.card-thanks {
+      .tmp-img {
+        background-color: #a7df2e;
+      }
+    }
+
+    &.card-celebration {
+      .tmp-img {
+        background-color: #0052ff;
+      }
+    }
+
+    // border-bottom: solid 1px $white-milk;
+    // padding-bottom: 20px;
+    .txt-noti {
+      display: flex;
+      justify-content: center;
+      margin-right: 20px;
+      margin-left: 20px;
+      .txt-ellip {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        max-width: 70px;
+      }
+      .ico-time-small {
+        background-image: url("../../image/icon/ico-time-small.png");
+        width: 20px;
+        height: 20px;
+        background-size: 20px 20px;
+        display: block;
+        background-repeat: no-repeat;
+      }
+      .ico-gift-small {
+        background-image: url("../../image/icon/ico-gift-small.png");
+        width: 20px;
+        height: 20px;
+        background-size: 20px 20px;
+        display: block;
+        background-repeat: no-repeat;
+      }
+      span {
+        @include pre-700-14-20;
+        &.txt {
+          font-style: normal;
+          text-align: center;
+          color: $black;
+          margin-top: 0;
+          display: flex;
+        }
+        &.txt-special {
+          font-style: normal;
+          text-align: center;
+          color: $blue-dark;
+          margin-left: 2px;
+        }
+      }
+    }
+    .tmp-img {
+      margin-top: 80px;
+      margin-right: 20px;
+      margin-left: 20px;
+      // margin-top: 30px;
+      // height: 145px;
+      height: 95px;
+      display: flex;
+      justify-content: center;
+      border-radius: 15px;
+      position: relative;
+
+      .shadow {
+        position: absolute;
+        width: 100px;
+        height: 20px;
+        bottom: 0px;
+        top: 60px;
+        left: calc(50% - 50px);
+        border-radius: 50%;
+        background: #000000;
+        opacity: 0.2;
+        filter: blur(10px);
+      }
+
+      .obj {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        //left: 74px;
+        top: -50px;
+        // width: 100%;
+        // max-width: 336px;
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    > .txt {
+      margin-top: 18px;
+      margin-right: 30px;
+      margin-left: 30px;
+      .txt-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .line {
+          width: 1px;
+          height: 8px;
+          background-color: #eee;
+          margin: 6px;
+        }
+        .txt-send {
+          @include pre-700-14-20;
+          font-style: normal;
+          color: $black;
+          display : inherit;
+          overflow: hidden;
+          >span{
+            display: inline-block;
+            vertical-align: top;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            max-width: 70px;
+          }
+        }
+        .txt-date {
+          @include pre-700-14-20;
+          font-style: normal;
+          color: $black;
+        }
+      }
+      .txt-message {
+        margin-top: 10px;
+        @include pre-body-04-reg;
+        font-style: normal;
+        text-align: center;
+        color: $black;
+
+        > p {
+          display: -webkit-box;
+          word-wrap: break-word;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .line-tranform {
+    height: 1px;
+    background-color: #eee;
+    margin: 20px 0;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .product {
+    display: flex;
+    // gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 20px;
+    gap: 14px;
+    .wrapper-product {
+      display: flex;
+      gap: 14px;
+      width: calc(100%);
+
+      .thumb-product-xs {
+        min-width: 80px;
+      }
+
+      .info-product-hor-1 {
+        display: flex;
+        align-items: center;
+        width: calc(100%);
+
+        .txt-brand {
+          p {
+            @include pre-body-05-med;
+            font-style: normal;
+            color: $dark-gray;
+
+            @include hiddenLine(1);
+          }
+        }
+        .txt-name {
+          margin-top: 2px;
+          p {
+            @include pre-700-14-20;
+            font-style: normal;
+            color: $black;
+            max-height: 40px;
+
+            @include hiddenLine(2);
+          }
+        }
+        .txt-benefits {
+          margin-top: 5px;
+          p {
+            @include pre-body-05-bold;
+            font-style: normal;
+            color: $black;
+
+            @include hiddenLine(1);
+          }
+        }
+      }
+    }
+    .wrapper-product-2 {
+      @extend .wrapper-product;
+    }
+    .badge{
+      flex-shrink: 0;
+    }
+  }
+}

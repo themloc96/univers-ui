@@ -1,0 +1,169 @@
+@import "../base/common.scss";
+@import "../base/font";
+@import "../base/style";
+@import "../components/popup_dropdown";
+
+// <link rel="stylesheet" href="../../styles/css/style.css" />
+// <link rel="stylesheet" href="../../styles/css/font.css" />
+
+button {
+  border: none;
+  background-color: $background-transparent;
+  padding: 0px;
+}
+.list-btn-login {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0px;
+  padding: 61px 12px 40px;
+  margin: 0;
+  gap: 8px;
+  button {
+    position: relative;
+    @include pre-body-03-med;
+    text-align: center;
+    cursor: pointer;
+    p {
+      // padding-top: 4px;
+      font-weight: 400;
+    }
+    .strong {
+      display: inline-block;
+      width: 160px;
+      margin: auto;
+      padding: 0;
+      box-sizing: border-box;
+      font-weight: 500 !important;
+    }
+  }
+  .tospan {
+    height: 80px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  img {
+    width: 44px;
+    height: 44px;
+    margin: 20px 40px 20px 5.55vw;
+  }
+}
+
+.btn-link {
+  &.active {
+    .btn-area {
+      position: absolute;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.03);
+    }
+  }
+}
+.btn-t {
+  background: #3617ce;
+  color: $white;
+  img {
+    margin: 20px 44px 16px 20px;
+  }
+}
+.btn-kakao {
+  background: #fae100;
+  color: $black;
+  img {
+    margin: 20px 50px 16px 20px;
+  }
+}
+.btn-naver {
+  background: #06be34;
+  color: $white;
+  img {
+    margin: 20px 51px 16px 20px;
+  }
+}
+.btn-apple {
+  background: $black;
+  color: $white;
+  img {
+    margin: 20px 51px 16px 20px;
+  }
+}
+.btn-google {
+  background: $white-milk;
+  color: $black;
+  img {
+    margin: 20px 47px 16px 20px;
+  }
+}
+a.btn-link {
+  text-decoration: none;
+  width: 100%;
+  justify-content: start;
+  align-content: center;
+}
+.btn-Active {
+  position: absolute;
+  width: 100%;
+  &:active {
+    background-color: $background-transparent-1;
+  }
+}
+.icon {
+  position: absolute;
+  top: 20px;
+  bottom: 16px;
+  left: 20px;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin: auto;
+  // position: absolute;
+  // top: 20px;
+  // bottom: 16px;
+  // left: 20px;
+  // display: inline-block;
+  // width: 44px;
+  // height: 44px;
+  // margin: auto;
+}
+.icon-t {
+  background-size: cover;
+  background-image: url("../../image/login/img_logo_login_t.png");
+  background-repeat: no-repeat;
+}
+.icon-kakao {
+  background-size: cover;
+  background-image: url("../../image/login/img_logo_login_kakao.png");
+  background-repeat: no-repeat;
+}
+.icon-naver {
+  background-size: cover;
+  background-image: url("../../image/login/img_logo_login_naver.png");
+  background-repeat: no-repeat;
+}
+.icon-apple {
+  background-size: cover;
+  background-image: url("../../image/login/img_logo_login_apple.png");
+  background-repeat: no-repeat;
+}
+.icon-google {
+  background-size: cover;
+  background-image: url("../../image/login/img_logo_login_google.png");
+  background-repeat: no-repeat;
+}
+.header-right {
+  display: flex;
+  justify-content: end;
+}
+.icon-close {
+  background: url("../../image/icon/ico_close.png");
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+  display: inherit;
+  width: 28px;
+  height: 28px;
+}
+.btn-header-close {
+  margin: 18px;
+}

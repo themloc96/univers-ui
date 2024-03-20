@@ -1,0 +1,519 @@
+@import "../../scss/abstracts/spacing";
+
+// color
+$blue-dark: #3617ce;
+$yellow: #ffb800;
+$yellow-dark: #ffcd4c;
+$blue-light: #0052ff;
+$white: #ffffff;
+$white-milk: #f6f6f6;
+$green: #3fbea8;
+$dark-green: #06be34;
+$pink: #f73e53;
+$navy: #0b1a59;
+$black: #000000;
+$grey: #cecece;
+$grey-light: #eaeaea;
+$grey-dark: #f8f8f8;
+$dark-gray: #a0a0a0;
+$black: #000000;
+$red: #ff0000;
+$gray: #666666;
+$background-transparent: rgba(0, 0, 0, 0);
+$background-transparent-1: rgba(0, 0, 0, 0.03);
+$font-t-universe: "T Universe Sans TTF";
+$font-pretendard: "Pretendard";
+
+// font family
+@mixin font-t-universe {
+  font-family: $font-t-universe;
+}
+
+@mixin font-pretendard {
+  font-family: $font-pretendard;
+}
+
+// font style
+@mixin t-headline-01 {
+  @include font-t-universe;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@mixin t-headline {
+  @include font-t-universe;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+
+@mixin t-title-01 {
+  @include font-t-universe;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -1px;
+}
+
+@mixin t-title_02 {
+  @include font-t-universe;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin t-title-03 {
+  @include font-t-universe;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+@mixin t-etc-badge {
+  @include font-t-universe;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: -0.3px;
+}
+
+@mixin t-etc-badge-bold-02 {
+  @include font-t-universe;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 11px;
+  letter-spacing: -0.3px;
+}
+
+@mixin pre-title-01 {
+  @include font-pretendard;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-title-02 {
+  @include font-pretendard;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -1px;
+}
+@mixin pre-title-04 {
+  @include font-pretendard;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-700-14-20 {
+  @include font-pretendard;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-body-03-bold {
+  @include font-pretendard;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-body-03-med {
+  @include font-pretendard;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-body-04-bold {
+  @include font-pretendard;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-body-04-reg {
+  @include font-pretendard;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-body-05-bold {
+  @include font-pretendard;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-body-05-med {
+  @include font-pretendard;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-body-05-reg {
+  @include font-pretendard;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.84px;
+}
+
+@mixin pre-etc-badge-med {
+  @include font-pretendard;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: -1px;
+}
+
+@mixin pre-etc-badge-med-02 {
+  @include font-pretendard;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 11px;
+  letter-spacing: -0.5px;
+}
+
+.badge-num {
+  /*
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  background: $blue-dark;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  justify-content: center;
+  width: 18px;
+  height: 17px;
+  .total {
+    @include font-t-universe;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 11px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: $white;
+    margin: 0;
+  }
+  /**/
+
+  background: #3617ce;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  font-family: "T Universe Sans TTF";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  padding: 3px 5px;
+}
+
+@mixin badge-1{
+  @include pre-etc-badge-med-02;
+
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  border-radius: 4px;
+
+
+}
+
+.badge-blue-1{
+  @include badge-1;
+  color: #3617CE;
+  background: rgba(54, 23, 206, 0.05);
+}
+.badge-blue-2{
+  @include badge-1;
+  color: #FFFFFF;
+  background: #3617CE;
+}
+.badge-gray-1{
+  @include badge-1;
+  color: #0000007f;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.badge-gray-2{
+  @include badge-1;
+  color: #FFFFFF;
+  background: #A0A0A0;
+}
+
+@mixin font-package($family, $style, $weight, $size, $line-height, $letter-spacing){
+  @if ($family != ''){
+      font-family: $family;
+  }
+  @if ($style != ''){
+      font-style: $style;
+  }
+  @if ($weight != ''){
+      font-weight: $weight;
+  }
+  @if ($size != ''){
+      font-size: $size;
+  }
+  @if ($line-height != ''){
+      line-height: $line-height;
+  }
+  @if ($letter-spacing != ''){
+      letter-spacing: $letter-spacing;
+  }
+}
+a{
+  text-decoration-line: none;
+}
+html, body{
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+}
+
+body{
+  max-width: 520px;
+  margin: 0 auto !important;
+  width: 100%;
+}
+
+.badge-product-rank-num {
+  width: 17px;
+  height: 17px;
+  backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+@mixin pageindicator-button{
+  width:4px;
+  height:4px;
+  background: #A0A0A0;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.pageindicator{
+  display: flex;
+  gap: 5px;
+  .unselected{
+    @include pageindicator-button;
+  }
+  .selected{
+    @include pageindicator-button;
+    background: #000000;
+    opacity: 1;
+  }
+}
+
+.pageindicator-num{
+  display: inline-block;
+  padding: 3px 5px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+  border-radius: 30px;
+  min-width: 30px;
+  div{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  span{
+    @include pre-etc-badge-med;
+    color: $white;
+    display: inline-block;
+    &:first-child{
+      width: 7px;
+      text-align: center;
+    }
+    &:nth-child(2){
+      width: 4px;
+      text-align: center;
+    }
+    &:last-child{
+      width: 7px;
+      text-align: right;
+    }
+  }
+}
+
+/**
+추후 삭제 예정
+*/
+.tooltip{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .tooltip-txt{
+    background: #000000;
+    border-radius: 8px;
+    padding:7px 12px;
+    span{
+      text-align: center;
+      @include font-pretendard;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: -1px;
+      color:$white;
+      word-break: keep-all;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+  .tap{
+    margin: 0 10px 0 10px;
+    width: 18px;
+    height: 6px;
+    background: url("../../image/icon/tap.svg");
+
+  }
+}
+
+/*
+추후 반영 예정
+**/
+.tooltip-up{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .tooltip-txt{
+    background: #000000;
+    border-radius: 8px;
+    padding:7px 12px;
+    span{
+      text-align: center;
+      @include font-pretendard;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: -1px;
+      color:$white;
+      word-break: keep-all;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+  .tap{
+    margin: 0 10px 0 10px;
+    width: 18px;
+    height: 6px;
+    background: url("../../image/icon/tap.svg");
+
+  }
+}
+
+.tooltip-down{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .tooltip-txt{
+    background: #000000;
+    border-radius: 8px;
+    padding:7px 12px;
+    span{
+      text-align: center;
+      @include font-pretendard;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: -1px;
+      color:$white;
+      word-break: keep-all;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+  .tap{
+    margin: 0 10px 0 10px;
+    width: 18px;
+    height: 6px;
+    background: url("../../image/icon/tap.svg");
+    transform: rotate(180deg);
+  }
+}
+
+
+.btn-info-small{
+  width: 20px;
+  height: 20px;
+  display: block;
+  >img{
+    width: 100%;
+  }
+}
+
+
+
+@mixin hiddenLine($lineNum: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lineNum;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+
+
+.popupAreaLib{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10000;
+	display: none;
+	>.popup-center-01{
+		z-index: 10001;
+	}
+}
+
+
+

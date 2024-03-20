@@ -1,0 +1,365 @@
+$image_path: "../../image";
+@import "../base/common.scss";
+
+@font-face {
+  @include font-t-universe;
+  src: url("./fonts/TUniverse_Sans/fwt/TUniverseSansTTF-cMd.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  @include font-pretendard;
+  src: url("../fonts/Pretendard/Pretendard-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  color: 000000;
+  @include font-t-universe;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  touch-action: pan-y;
+}
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* color*/
+
+.c-default {
+  color: $dark-gray !important;
+}
+
+.c-active {
+  color: $black !important;
+}
+
+.c-white {
+  color: $white !important;
+}
+
+.c-gray {
+  color: $white-milk !important;
+}
+
+.c-black {
+  color: $black !important;
+}
+
+.c-red {
+  color: $red !important;
+}
+
+/* background */
+
+.bg-default {
+  background-color: $dark-gray !important;
+}
+
+.bg-active {
+  background-color: $black !important;
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-gray {
+  background-color: $white-milk !important;
+}
+
+.bg-black {
+  background-color: $black !important;
+}
+
+.bg-red {
+  background-color: $red !important;
+}
+
+.txt.has-error {
+  color: $red !important;
+}
+
+.headline {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  color: $black;
+}
+
+.title-01-card {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.title-02-card {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+}
+
+.title-02 {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -1px;
+}
+
+.body-02 {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+.body-02-bold {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+.body-04-bold {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+.body-05 {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+.body-06-bold {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -1px;
+}
+
+.body-07 {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -1px;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex_column {
+  flex-direction: column !important;
+}
+
+.flex_row {
+  flex-direction: row !important;
+}
+
+.align_item_baseline {
+  align-items: baseline !important;
+}
+
+.space_between {
+  justify-content: space-between;
+}
+
+.pl-12 {
+  padding-left: 12px;
+}
+
+.pl-16 {
+  padding-left: 16px;
+}
+
+.pr-16 {
+  padding-right: 16px;
+}
+
+.pr-24 {
+  padding-right: 24px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mt-23 {
+  margin-top: 23px;
+}
+
+.mb-23 {
+  margin-bottom: 23px;
+}
+
+.mt18 {
+  margin-top: 18px !important;
+}
+
+.txt_right {
+  text-align: right;
+}
+
+.form {
+  margin-top: 40px;
+  @include font-pretendard;
+  font-style: normal;
+}
+
+.form-group {
+  display: flex;
+}
+
+.input-field {
+  box-sizing: border-box;
+  background: $white-milk;
+  border-radius: 30px;
+  min-height: 84px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+  padding-right: 18px;
+  align-content: center;
+  justify-content: center;
+  border: 2px solid $white-milk;
+}
+
+input.form-control {
+  @include font-pretendard;
+  width: 100%;
+  background: $white-milk;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  box-sizing: border-box;
+  border: none;
+  color: $black;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder,
+  &::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    color: $dark-gray;
+  }
+}
+
+.form-group {
+  &.active .input-field {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    background: $white;
+    border: 2px solid $black;
+  }
+
+  &.has-error .input-field {
+    background: $white !important;
+    border: 2px solid $red !important;
+  }
+
+  &.active .input-field input.form-control {
+    background: $white !important;
+  }
+
+  &.has-error .input-field {
+    input.form-control {
+      background: $white !important;
+    }
+
+    border: 2px solid $red !important;
+  }
+}
+
+label.form-control-label {
+  color: $black;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -1px;
+  opacity: 0.2;
+}
+
+.sub-title {
+  margin: 12px 24px 0 24px;
+  @include font-pretendard;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  color: $black;
+}
+
+a.sub-title {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.sub-title .icon {
+  background: url("#{$image_path}/icon/btn_small.png");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inherit;
+  width: 14px;
+  height: 14px;
+}
+
+.wp_100 {
+  width: 100%;
+}

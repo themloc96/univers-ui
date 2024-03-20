@@ -1,0 +1,250 @@
+@import "../main";
+@import "../base/common";
+@import "../components/_banner.scss";
+@import "../components/_survey.scss";
+
+.t-component-container {
+  background-color: $white;
+}
+.t-component-common {
+  width: auto;
+  margin: 40px 12px;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: $grey;
+  overflow: auto;
+  .guide-header {
+    .header {
+      position: relative;
+      max-width: 360px;
+      margin: unset;
+    }
+  }
+  .t-guide-title {
+    @include t-headline-01;
+    color: $blue-dark;
+  }
+
+  .t-component-title {
+    @include pre-body-03-med;
+    // color: #fff;
+    // background-color: #000;
+    width: max-content;
+    padding: 10px 0;
+    min-width: 200px;
+  }
+
+  .t-component {
+    padding: 20px 0;
+    position: relative;
+    max-width: 360px;
+    margin: unset;
+  }
+}
+.box-color {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 20px;
+}
+.color-white-01 {
+  background: $white;
+}
+.color-black-01 {
+  background: $black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.color-gray-01 {
+  background: $white-milk;
+}
+.color-gray-02 {
+  background: $grey-light;
+}
+.color-gray-03 {
+  background: $dark-gray;
+}
+.color-gray-04 {
+  background: $grey-light;
+}
+.color-blue {
+  background: $blue-dark;
+}
+.color-red {
+  background: $red;
+}
+
+.t-guide-content {
+  margin-top: 50px;
+}
+.component-title h1 {
+  margin-bottom: 20px;
+}
+
+
+
+// button
+.component-button {
+  .main-task-btn-60px {
+    height: 60px !important;
+    position: initial;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+.component-full {
+  width: 360px;
+}
+
+.component-header {
+  .tab-header {
+    position: relative;
+    display: flex;
+    padding: 0;
+  }
+}
+
+.component-title {
+  .sub-title {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    samp {
+      @include font-t-universe;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -1px;
+      color: $black;
+      margin-right: 1px;
+    }
+  }
+}
+
+.component-button-popup-toast{
+  .t-component{
+    max-width: 340px;
+  }
+}
+
+.component-btn-tabbar{
+  .tab-bar {
+    text-align: center;
+    justify-content: center;
+    // display: flex;
+    opacity: 0.3;
+    -webkit-opacity: 0.3;
+    border: none;
+    width: 68px;
+    height: 64px;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    // backdrop-filter: blur(20px);
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+    }
+    &.active {
+      opacity: 1;
+      -webkit-opacity: 1;
+    }
+    .icon {
+      width: 32px;
+      height: 32px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    span {
+      @include t-etc-badge-bold-02;
+      text-align: center;
+      color: $black;
+      margin-top: 2px;
+      display: block;
+      padding-bottom: 15px;
+    }
+    .tab-label {
+      background: $blue-dark;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+      border-radius: 30px;
+      @include t-etc-badge;
+      text-align: center;
+      color: $white;
+      padding: 3px 4px;
+      position: absolute;
+      bottom: 55px;
+      z-index: 101;
+    }
+    &.btn-tabbar-01 .icon {
+      width: 32px;
+      height: 32px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+      background-image: url(../../image/icon/img_ico_tab_01.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.btn-tabbar-02 .icon {
+      width: 32px;
+      height: 32px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+      background-image: url(../../image/icon/img_ico_tab_04.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.btn-tabbar-03 .icon {
+      width: 32px;
+      height: 32px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+      background-image: url(../../image/icon/img_ico_tab_03.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.component-input-search{
+  &.input-search{
+    button{
+      position: initial;
+      padding: 0 10px;
+    }
+  }
+}
+
+
+
+// 탭바 바텀 고정을 풀기 위해 사용
+.tabbar-bottom {
+  position: inherit;
+}
+.btn-floating {
+  position: inherit;
+  width: 360px;
+  height: 130px;
+  .main-task-btn-60px {
+    // 원래 포지션은 fixed로 중앙정렬을 위해 컴포넌트 페이지에서만 margin-top 속성을 추가
+    margin-top: 38px;
+  }
+}
+
+.btn-floating {
+  padding: 0 12px;
+}

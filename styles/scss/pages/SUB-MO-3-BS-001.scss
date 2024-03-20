@@ -1,0 +1,96 @@
+@import "../base/common";
+@import "../base/style";
+@import "../base/font";
+@import "../layout/header";
+@import "../components/layout";
+@import "../components/buttons";
+@import "../components/popup_dropdown";
+.popup-dropdown {
+  .background {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    .header {
+      background: transparent;
+      .icon-close {
+        background: url(../../image/icon/btn-header-close.png);
+        background-repeat: no-repeat;
+        background-size: 28px 28px;
+        display: inherit;
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+  .bottomsheet {
+    .body {
+      height: auto !important;
+      min-height: 95px;
+    }
+    height: 334px !important;
+    .txt-title {
+      @include pre-title-02;
+      width: 280px;
+      margin: 0 0 0 24px;
+    }
+    .area-scroll {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      margin: 10px 12px 0 12px;
+      overflow-x: scroll;
+      height: auto;
+      padding-top: 15px;
+      max-height: 240px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .product {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        padding: 11px 12px;
+        height: 60px;
+        -webkit-tap-highlight-color: rgba(246, 246, 246, 0.5);
+        .txt-logo {
+          display: flex;
+          align-content: center;
+
+          .img-logo {
+            width: 38px;
+            height: 38px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .txt {
+            margin: 0 20px;
+            p {
+              margin: 0;
+              width: 220px;
+            }
+            .txt-title {
+              @include pre-body-03-bold;
+              color: $black;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+            .txt-sub {
+              margin-top: 6px;
+              @include pre-body-05-med;
+              color: $dark-gray;
+            }
+          }
+        }
+        .btn-txt-arrow-small {
+          padding: 0;
+        }
+      }
+      .product:last-child {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

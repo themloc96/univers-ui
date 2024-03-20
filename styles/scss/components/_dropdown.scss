@@ -1,0 +1,41 @@
+.dropdown-filter {
+    .btn-dropdown {
+      border-radius: 18px;
+      background: $white-milk;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .txt {
+        color: $dark-gray;
+        @include font-package("Pretendard", normal, 500, 14px, 20px, -1px);
+        .txt-date {
+        }
+        .txt-product {
+        }
+      }
+      .btn-arrow-small {
+        border: none;
+        background: transparent;
+  
+        i {
+          background: url("../../image/icon/btn_small.png");
+          transform: rotate(90deg);
+          background-repeat: no-repeat;
+          background-size: 14px 14px;
+          display: inherit;
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  
+    &.selected {
+      .btn-dropdown{
+        .txt{
+          color: $black;
+          @include font-package("Pretendard", normal, 700, 14px, 20px, -1px);
+        }
+      }
+    }
+  }

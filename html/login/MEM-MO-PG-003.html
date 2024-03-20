@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>MEM-MO-PG-003</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../../styles/css/MEM-MO-PG-003.css">    
+</head>
+
+<body>
+    <div class="container mem-mo-pg-003">
+        <!-- component : header -->
+        <div class="header-main">
+            <!-- header -->
+            <div class="header">
+                <!-- btn-header-back -->
+                <button class="btn-header-back">
+                   <!-- icon-back -->
+                   <i class="icon-back"></i>
+                </button>
+            </div>
+          </div>
+        <div class="popup-toast">
+            <p>010-2447-7353번으로 <br/>인증번호를 다시 보내드렸어요.</p>
+        </div>
+        <div class="contents">
+            <!-- component : title -->
+            <div class="title">
+                <span>
+                    방금 보내드린<br />
+                    인증번호를<br />
+                    입력해 주세요
+                </span>
+            </div>
+
+            <div class="form">
+                <!-- error / active -->
+                <div class="form-group">
+                    <!-- component : input -->
+                    <!--에러 시: "has-error" class 추가-->
+                    <label class="input-default form-control-label">
+                        <span>인증번호</span>
+                        <div class="d-flex">
+                            <input class="form-control inp-auth-number" placeholder="전송된 인증번호를 입력해 주세요" type="tel"
+                                maxlength="6" />
+                            <span class="txt bold txt-right auth-number">00:00</span>
+                        </div>
+                    </label>
+                </div>
+                <!-- component : button -->
+                <div class="form-group d-flex space-between">
+                    <!--에러 시: "has-error" class 추가-->
+                    <span class="txt info txt-notice">인증번호가 도착하지 않으셨나요?</span>
+                    <!--버튼 활성화시: "btn-active" class 추가-->
+                    <button class="btn-small btn-resend  btn-active" onclick="resetAlert();">재전송</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- component : footer -->
+        <div class="btn-floating">
+            <!-- btn-main-task-login -->
+            <!--버튼 활성화시: "bg-black" class 추가-->
+            <button type="button" class="btn-main-task-login">인증하기
+                <span>
+                    <lottie-player src="../../image/icon/loading-animation-60-white.json" speed="1" loop autoplay background="transparent"></lottie-player>
+                  </span>
+            </button>
+        </div>
+
+    </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../scripts/mem-mo-pg-003.js"></script>
+    <script>
+        window.onload = function () {
+            var inputElement = document.querySelector(".inp-auth-number");
+            inputElement.focus();
+            startCountdowns();
+        }
+    </script>
+</body>
+
+</html>

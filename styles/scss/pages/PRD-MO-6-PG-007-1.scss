@@ -1,0 +1,15 @@
+@import "./Detail-Component.scss";
+
+.header-main .header {
+	z-index: 999;
+}
+
+.list-notification {
+	.list-info {
+		.btn-dropdown-notification {
+			.list-info {
+				height: 0;
+			}
+		}
+	}
+}

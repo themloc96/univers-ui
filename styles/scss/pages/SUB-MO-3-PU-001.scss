@@ -1,0 +1,279 @@
+@import "../base/common";
+@import "../base/style";
+@import "../base/font";
+@import "../layout/header";
+@import "../components/layout";
+@import "../components/buttons";
+@import "../components/popup_dropdown";
+@import "../components/toast_popup";
+.popup-toast {
+
+  .txt-brand {
+    max-width: 120px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.popup-barcode {
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  &.show {
+    display: flex;
+  }
+  .background {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    .header {
+      background: transparent;
+      .icon-close {
+        background: url(../../image/icon/btn-header-close.png);
+        background-repeat: no-repeat;
+        background-size: 28px 28px;
+        display: inherit;
+        width: 28px;
+        height: 28px;
+      }
+    }
+  } //dot-horizon.png
+  .card-barcode {
+    // margin: 0 12px;
+    border-radius: 30px;
+    display: flow-root;
+    position: relative;
+    z-index: 9999;
+    height: 453px;
+    width: 312px;
+
+    margin: 0 auto;
+
+    &.top {
+      border-radius: 30px 30px 0 0;
+      height: 323px;
+      background-color: #fff;
+    }
+    &.middle {
+      height: 25px;
+      filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0)) !important;
+      box-shadow: inherit;
+      overflow: hidden;
+      border-radius: 0;
+      .cut {
+        width: 313px;
+        height: 25px;
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &.bottom {
+      border-radius: 0 0 30px 30px;
+      height: 105px;
+      background-color: #fff;
+    }
+
+    .logo-box {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      position: inherit;
+      .logo {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        position: inherit;
+        .img-logo {
+          width: 38px;
+          height: 38px;
+          margin-left: -12px;
+          &:first-child {
+            margin-left: 0;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .badge-num-black {
+          width: 20px;
+          height: 20px;
+          border-radius: 30px;
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(2px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          position: absolute;
+          bottom: 23px;
+          right: -5px;
+          span {
+            @include t-etc-badge-bold-02;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .txt-title {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+      // margin: 20px 0;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      .txt-brand {
+        @include pre-body-05-bold;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span {
+          max-width: 168px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        i {
+          background: url(../../image/icon/btn_small.png);
+          background-repeat: no-repeat;
+          background-size: 14px 14px;
+          display: inherit;
+          width: 14px;
+          height: 14px;
+        }
+      }
+      .txt-benefit {
+        @include pre-title-01;
+        width: 240px;
+      }
+      .txt-sub {
+        @include pre-body-05-med;
+        display: flex;
+        flex-direction: column;
+        color: $dark-gray;
+        row-gap: 3px;
+        width: 200px;
+        position: inherit;
+        span {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+    .barcode {
+      display: flex;
+      flex-direction: column;
+      position: inherit;
+      .expired {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(5px);
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        padding: 34px 48px;
+        margin: 0 8px;
+        &.show {
+          display: flex;
+        }
+        .txt-expired {
+          width: 200px;
+          @include pre-body-04-bold;
+          text-align: center;
+        }
+        .btn-refresh {
+          background: transparent;
+          border: none;
+          width: 20px;
+          height: 20px;
+          margin: 0 auto;
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translate(-10px, 0);
+          i {
+            background: url("../../image/icon/ico-refresh.png");
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            display: inherit;
+            width: 20px;
+            min-width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      .img-barcode {
+        width: 260px;
+        height: 60px;
+        margin: 0 auto;
+        margin-top: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .txt {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 30px;
+        .txt-barcode-number {
+          @include pre-body-05-med;
+          display: flex;
+          gap: 2px;
+          margin-top: 13px;
+        }
+        .btn-txt-underline {
+          margin-top: 12px;
+        }
+      }
+    }
+
+    .txt-sub {
+      position: absolute;
+      bottom: 22px;
+      left: 30px;
+      .txt-01 {
+        @include pre-body-04-bold;
+        color: $black;
+        width: 218px;
+      }
+      .txt-02 {
+        width: 218px;
+        @include pre-body-05-med;
+        color: $dark-gray;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px;
+        margin-top: 7px;
+      }
+    }
+    .txt-time {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 9999;
+      display: none;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      margin-bottom: -34px;
+      &.active {
+        display: flex;
+      }
+      p {
+        @include pre-body-05-med;
+        color: $white;
+        display: flex;
+        gap: 5px;
+      }
+    }
+  }
+}

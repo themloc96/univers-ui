@@ -1,0 +1,23 @@
+@import "../base/common.scss";
+
+.select-field {
+  border: none;
+  background: $white-milk;
+  @include pre-body-04-reg;
+  border-radius: 20px;
+  height: 60px;
+  padding: 20px 20px 20px 20px;
+}
+select.form-control {
+  width: 100%;
+  border: none;
+  @include pre-body-03-med;
+  color: $black;
+  background: $white-milk;
+  height: 20px;
+  margin: 0px;
+}
+
+select.form-control:focus {
+  outline: none;
+}

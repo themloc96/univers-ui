@@ -1,0 +1,743 @@
+@import "../base/font";
+@import "../base/style";
+@import "../components/buttons";
+@import "../main";
+@import "../base/common.scss";
+
+.pay-mo-10-pg-001-1 {
+  .div-small {
+    width: auto;
+    height: 1px;
+    margin: auto;
+    background: $white-milk;
+  }
+  .line-gray {
+    width: auto;
+    height: 10px;
+    margin: auto;
+    background: $white-milk;
+  }
+  .contents {
+    .info-user-default {
+      padding: 20px 24px;
+      .con {
+        display: flex;
+        justify-content: space-between;
+        .txt-title {
+          color: $black;
+          @include pre-body-03-bold;
+          max-width: 74px;
+        }
+        .info-summary {
+          display: flex;
+          .txt-info {
+            display: inline-flex;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            span {
+              color: $black;
+              text-align: right;
+              @include pre-body-04-reg;
+              &:first-child {
+                max-width: 72px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+              }
+              &:last-child {
+                max-width: calc(200px - 78px);
+                margin-left: 3px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+              }
+            }
+          }
+        }
+        .btn-txt-arrow {
+          margin: 0;
+        }
+      }
+    }
+    .skt-user-info {
+      padding: 20px 24px;
+      .con {
+        display: flex;
+        justify-content: space-between;
+        .txt-title {
+          display: flex;
+          align-items: center;
+          .btn-info-small {
+            background: transparent;
+            border: none;
+            width: 20px;
+            height: 20px;
+            i {
+              background: url("../../image/icon/ico-info-stroke.png");
+              background-repeat: no-repeat;
+              background-size: 18px 17px;
+              display: inherit;
+              width: 18px;
+              height: 20px;
+              cursor: pointer;
+            }
+          }
+          p {
+            margin-left: 4px;
+            color: $black;
+            @include pre-body-03-bold;
+          }
+        }
+        .btn-txt-arrow-small {
+          .btn-txt-arrow {
+            margin: 0;
+            samp {
+              overflow: hidden;
+              color: $black;
+              text-align: right;
+              text-overflow: ellipsis;
+              @include pre-body-04-reg;
+              width: auto;
+              &:nth-child(2) {
+                color: $blue-dark;
+              }
+            }
+          }
+        }
+      }
+    }
+    .prd-info {
+      padding: 30px 12px;
+      .header {
+        position: unset;
+        max-width: none;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px;
+        .txt-title {
+          color: $black;
+          @include pre-body-03-bold;
+        }
+        .btn-dropdown {
+          display: flex;
+          .btn-txt-arrow {
+            margin: 0;
+            .btn-arrow-small {
+              transform: rotate(-90deg);
+            }
+          }
+          .price {
+            .txt-price {
+              span {
+                color: $black;
+                text-align: right;
+                @include pre-700-14-20;
+                &:first-child {
+                  color: $blue-dark;
+                  text-align: right;
+                  @include pre-700-14-20;
+                }
+              }
+            }
+          }
+        }
+      }
+      .prd {
+        margin-top: 20px;
+        .prd-info-case {
+          &:not(:first-child) {
+            margin-top: 10px;
+          }
+          border-radius: 30px;
+          border: 1px solid var(--main-color-gray-04, #eee);
+          background: var(--main-color-white-01, #fff);
+          padding: 19px;
+          .title {
+            padding: 0;
+            p {
+              color: $black;
+              @include pre-body-03-bold;
+            }
+          }
+          .list-prd {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+            margin-top: 24px;
+          }
+          .prd-01 {
+            display: flex;
+            align-items: center;
+            .prd-info {
+              display: flex;
+              align-items: center;
+              padding: 0;
+              &.case-02 {
+                align-items: flex-start;
+              }
+              .thumb-product-xss {
+                width: 56px;
+                height: 56px;
+                img {
+                  width: 100%;
+                }
+              }
+              .txt-prd-info-main {
+                margin-left: 10px;
+                .txt-brand {
+                  max-width: 230px;
+                  overflow: hidden;
+                  color: $dark-gray;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  @include pre-body-05-med;
+                }
+                .txt-name {
+                  max-width: 230px;
+                  margin-top: 2px;
+                  overflow: hidden;
+                  color: $black;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  @include pre-700-14-20;
+                }
+                .info-delevery {
+                  margin-top: 2px;
+                  position: relative;
+                  .txt-delevery-date {
+                    display: flex;
+                    align-items: center;
+                    span {
+                      color: $blue-dark;
+                      text-align: center;
+                      @include pre-body-05-med;
+                      &:nth-child(2) {
+                        margin-left: 2px;
+                      }
+                    }
+                    .btn-info-small {
+                      background: transparent;
+                      border: none;
+                      margin-right: 4px;
+                      width: 15px;
+                      height: 15px;
+                      padding: 0 0 1px 3px;
+                      i {
+                        background: url("../../image/icon/ico-info-stroke.png");
+                        background-repeat: no-repeat;
+                        background-size: 12px 12px;
+                        display: inherit;
+                        width: 12px;
+                        height: 12px;
+                        cursor: pointer;
+                      }
+                    }
+                  }
+                  .tooltip {
+                    opacity: 0;
+                    background: #000000;
+                    border-radius: 8px;
+                    padding: 7px 20px;
+                    @include pre-body-05-med;
+                    font-style: normal;
+                    text-align: center;
+                    position: absolute;
+                    left: -1px;
+                    top: 20px;
+                    color: #ffffff;
+                    transition: opacity 0.5s ease-in, top 0.5s ease-in;
+                    &.show {
+                      opacity: 1;
+                    }
+                    p {
+                      color: var(--main-color-white-01, #fff);
+                      text-align: center;
+                      @include pre-etc-badge-med;
+                      font-style: normal;
+                      margin-top: 1px;
+                      margin-left: -1px;
+                    }
+                    &::after {
+                      content: "";
+                      display: block;
+                      background-image: url(../../image/icon/tap.png);
+                      width: 19px;
+                      height: 6px;
+                      background-size: 19px 6px;
+                      background-repeat: no-repeat;
+                      position: absolute;
+                      top: -5px;
+                      right: 38%;
+                      transform: rotate(-180deg);
+                    }
+                  }
+                }
+
+                .txt-option {
+                  &.google {
+                    margin-top: 6px;
+                  }
+                  margin-top: 4px;
+                  color: $dark-gray;
+                  @include pre-body-05-med;
+                  p {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    max-width: 230px;
+                    color: $dark-gray;
+                  }
+                  &:first-child {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  }
+                  .add-memo-02 {
+                    margin-top: 4px;
+                    span {
+                      &:first-child {
+                        margin-right: 2px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .info-price {
+            border-radius: 14px;
+            background: $white-milk;
+            margin-top: 16px;
+            &.not-spacing-top {
+              margin-top: 0;
+            }
+
+            .info-price-full {
+              &.show {
+                .div-xxs {
+                  background: var(--main-color-gray-04, #eee);
+                  height: 1px;
+                  width: 100%;
+                  margin: 10px 0;
+                }
+                .list {
+                  height: 74px;
+                  padding-top: 16px;
+                }
+              }
+
+              .list {
+                gap: 8px;
+                display: flex;
+                flex-direction: column;
+                padding: 16px 20px;
+                padding-bottom: 0;
+                height: 0;
+                overflow: hidden;
+                transition: height 0.5s ease-in;
+                .subsribe {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  p {
+                    color: $black;
+                    @include pre-body-05-med;
+                    &.txt-price {
+                      color: $black;
+                      text-align: right;
+                      @include pre-body-05-med;
+                    }
+                  }
+                }
+                .first-subsribe {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  p {
+                    color: $black;
+                    @include pre-body-05-med;
+                    &.txt-price {
+                      color: $black;
+                      text-align: right;
+                      @include pre-body-05-med;
+                    }
+                  }
+                }
+                .delevery {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  p {
+                    color: $black;
+                    @include pre-body-05-med;
+                    &.txt-price {
+                      color: $black;
+                      text-align: right;
+                      @include pre-body-05-med;
+                    }
+                  }
+                }
+              }
+            }
+            .info-price-summary {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 0 20px 16px 20px;
+              .info-price {
+                .btn-txt-arrow {
+                  .btn-arrow-small {
+                    background: url("../../image/icon/ico-arrow-small-down.png");
+                    background-repeat: no-repeat;
+                    background-size: 15px 15px;
+                    display: inherit;
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                  }
+                }
+              }
+              &.open {
+                .info-price {
+                  .btn-txt-arrow {
+                    .btn-arrow-small {
+                      background: url("../../image/icon/ico-arrow-small-up.png");
+                      background-repeat: no-repeat;
+                      background-size: 15px 15px;
+                      display: inherit;
+                      width: 15px;
+                      height: 15px;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+              .txt-title {
+                max-width: 74px;
+                color: $black;
+                @include pre-700-14-20;
+              }
+              .info-price {
+                display: flex;
+                padding: 0;
+                margin-top: 0;
+                .txt-peroid-price {
+                  span {
+                    color: $black;
+                    text-align: right;
+                    @include pre-700-14-20;
+                    &:nth-child(3) {
+                      margin: 0 2px;
+                    }
+                  }
+                }
+                .btn-txt-arrow {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .coupon {
+      padding: 20px 12px;
+      .con {
+        .header {
+          height: auto;
+          position: unset;
+          margin: 0;
+          max-width: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 12px;
+          .title {
+            padding: 0;
+            color: $black;
+            @include pre-body-03-bold;
+          }
+          .btn-txt-add-coupon {
+            .btn-txt-underline {
+              button {
+                background: transparent;
+                border: none;
+                color: $black;
+                @include pre-body-05-bold;
+                border-bottom: solid 1px #000;
+              }
+            }
+          }
+        }
+        .btn-gray-arrow-right {
+          border-radius: 18px;
+          background: $white-milk;
+          padding: 20px;
+          margin-top: 17px;
+          .btn-txt-select {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn-txt-arrow {
+              margin: 0;
+            }
+            .txt {
+              display: flex;
+              align-items: center;
+              .title {
+                padding: 0;
+                color: $black;
+                @include pre-700-14-20;
+              }
+              .count {
+                span {
+                  color: $black;
+                  @include pre-700-14-20;
+                  &:first-child {
+                    color: $blue-dark;
+                    @include pre-700-14-20;
+                    margin-left: 4px;
+                    margin-right: 2px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .point {
+      padding: 20px 12px;
+      .header {
+        height: auto;
+        position: unset;
+        max-width: none;
+        margin: 0;
+        padding: 0 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .txt-main {
+          color: $black;
+          @include pre-body-03-bold;
+        }
+        .btn-coupon {
+          .txt-point {
+            display: flex;
+            align-items: center;
+            .title {
+              padding: 0;
+              color: $black;
+              text-align: right;
+              margin-right: 4px;
+              @include pre-body-05-med;
+            }
+            .point {
+              padding: 0;
+              display: flex;
+              align-items: center;
+              span {
+                color: $blue-dark;
+                text-align: right;
+                @include pre-body-05-bold;
+                &:first-child {
+                  margin-right: 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .con {
+        .input-register {
+          border-radius: 18px;
+          background: $white-milk;
+          padding: 14px 20px;
+          margin: 20px 0 0 0;
+          input {
+            color: $dark-gray;
+            @include pre-body-04-reg;
+          }
+          .btn-small {
+            background: #000;
+            color: $white;
+            margin-top: -2px;
+            margin-right: 1px;
+          }
+        }
+        .btn-check {
+          margin-top: 15px;
+          display: flex;
+          align-items: center;
+          .btn-check-txt {
+            .txt {
+              margin-left: 1px;
+              color: $black;
+              @include pre-700-14-20;
+            }
+            .btn-checkbox {
+              margin-left: 12px;
+            }
+          }
+          .btn-info-small {
+            margin-left: 2px;
+            width: 15px;
+            height: 15px;
+            background: transparent;
+            border: none;
+            i {
+              background: url("../../image/icon/ico-info-stroke.png");
+              background-repeat: no-repeat;
+              background-size: 15px 15px;
+              display: inherit;
+              width: 15px;
+              height: 15px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .subscription {
+      padding: 30px 24px;
+      .con {
+        .txt-title {
+          display: flex;
+          align-items: center;
+          .txt {
+            color: $black;
+            @include pre-body-03-bold;
+            margin-right: 4px;
+          }
+          button {
+            background: transparent;
+            border: none;
+            width: 20px;
+            height: 20px;
+            padding: 2px 0;
+            i {
+              background: url("../../image/icon/ico-info-stroke-01.png");
+              background-repeat: no-repeat;
+              background-size: 15px 15px;
+              display: inherit;
+              width: 15px;
+              height: 15px;
+              cursor: pointer;
+            }
+          }
+        }
+        .btn-subscription {
+          margin-top: 30px;
+          .wrapper-radio {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+          .info-regularly {
+            margin-top: 12px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: $white-milk;
+            color: $black;
+            @include pre-body-05-med;
+          }
+        }
+      }
+    }
+    .payment {
+      padding: 30px 12px;
+      .title-payment {
+        .txt-title {
+          margin-left: 12px;
+          color: $black;
+          @include pre-body-03-bold;
+        }
+        .banner-event {
+          border-radius: 18px;
+          background: rgba(54, 23, 206, 0.05);
+          padding: 12px 20px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          .txt {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 4px;
+            .txt-title {
+              margin-left: 0;
+              color: $black;
+              @include pre-700-14-20;
+            }
+          }
+          .txt-sub {
+            color: $dark-gray;
+            @include pre-body-05-med;
+          }
+        }
+        .pageindicator {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      .list-payment {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .skpay {
+          .btn-skpay {
+            padding: 0 12px;
+            .img-skpay {
+              width: 48px;
+              height: 14px;
+            }
+          }
+          .card-default {
+            margin-top: 16px;
+            .btn-non-card {
+              .btn-plus-card {
+                margin: auto;
+                width: 240px;
+                height: 152px;
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+        .kakaopay {
+          padding: 0 12px;
+          .btn-kakaopay {
+            img {
+              width: 44px;
+              height: 18px;
+            }
+          }
+        }
+        .naver-pay {
+          padding: 0 12px;
+          .btn-naverpay {
+            img {
+              width: 40px;
+              height: 18px;
+            }
+          }
+        }
+        .toss-pay {
+          padding: 0 12px;
+          .btn-toss {
+            img {
+              width: 74px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

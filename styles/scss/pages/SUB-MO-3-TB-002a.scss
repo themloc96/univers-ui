@@ -1,0 +1,121 @@
+@import "../layout/header";
+@import "../components/popup_dropdown";
+@import "../base/style";
+@import "../base/font";
+@import "../base/common";
+@import "../components/_category_menu_scroll";
+@import "../components/list_category";
+@import "../components/tabbar_bottom";
+@import "../components/banner";
+@import "../components/search";
+@import "../../../styles/scss/abstracts/spacing";
+
+main {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 70px);
+  padding-top: 75px;
+
+
+  .top{
+    position: relative;
+    .title{
+      display: inline-block;
+      padding-top: 8px;
+      @include font-package('T Universe Sans TTF',normal, 500, 28px, 32px, -1px);
+      max-width: 230px;
+    }
+    .btn-toggle{
+      display: inline-block;
+      width: 86px;
+      height: 27px;
+      border-radius: 100px;
+      background-color : #eee;
+      font-size: 0;
+
+      position: absolute;
+      bottom: 0;
+      right: 24px;
+
+      >button{
+        font-size: 0;
+        color : #a0a0a0;
+        margin: 2px;
+        border: none;
+        background: none;
+        border-radius: 100px;
+        cursor: pointer;
+        >span{
+          @include font-package('Pretendard',normal, 500, 12px, 14px, -1px);
+          display: inline-block;
+          width: 30px;
+          height: 14px;
+        }
+        &:first-child{
+          margin-right: 0px;
+        }
+        &:last-child{
+          margin-left: 0px;
+        }
+        &.on{
+          // font-weight: 700 !important;
+          background-color: #fff;
+          color: #000;
+          padding: 5px 6px 4px;
+          >span {
+            font-weight: 700;
+          }
+        }
+        &.off{
+          padding: 5px 6px 4px 4px;
+
+          &:first-child{
+            padding-left: 6px;
+            padding-right: 4px;
+          }
+          &:last-child{
+            padding-right: 6px;
+            padding-left: 4px;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+
+}
+
+
+
+
+
+
+
+.sub-mo-3-tb-002a {
+  .title {
+    padding-top: 8px;
+    @include font-package('T Universe Sans TTF',normal, 500, 28px, 32px, -1px);
+  }
+  .header-home{
+    top : 0;
+  }
+  .container {
+    height: calc(100vh - 240px);
+  //  min-height: 310px;
+    position: relative;
+    .not-category {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      text-align: center;
+      color: #a0a0a0;
+      @include pre-body-04-reg;
+    }
+  }
+}
+
+body{
+  background: #F6F6F6;
+}

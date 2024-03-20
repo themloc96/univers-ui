@@ -1,0 +1,182 @@
+@import "./reset.css";
+@import "./font.css";
+@import "../../../../styles/scss/base/common.scss";
+
+// CSS Easing : Quad == GSAP Power1
+$power1in: cubic-bezier(0.11, 0, 0.5, 0);
+$power1out: cubic-bezier(0.5, 1, 0.89, 1);
+$power1inOut: cubic-bezier(0.45, 0, 0.55, 1);
+
+// CSS Easing : Cubic == GSAP Power2
+$power2in: cubic-bezier(0.32, 0, 0.67, 0);
+$power2out: cubic-bezier(0.33, 1, 0.68, 1);
+$power2inOut: cubic-bezier(0.65, 0, 0.35, 1);
+
+// CSS Easing : Quart == GSAP Power3
+$power3in: cubic-bezier(0.5, 0, 0.75, 0);
+$power3out: cubic-bezier(0.25, 1, 0.5, 1);
+$power3inOut: cubic-bezier(0.76, 0, 0.24, 1);
+
+// CSS Easing : Quint == GSAP Power4
+$power4in: cubic-bezier(0.64, 0, 0.78, 0);
+$power4out: cubic-bezier(0.22, 1, 0.36, 1);
+$power4inOut: cubic-bezier(0.83, 0, 0.17, 1);
+
+$white_01: #ffffff;
+$black_01: #000000;
+$gray_01: #f6f6f6;
+$point_color: #3617ce;
+$etc_olor_noti: #3617ce;
+
+@mixin headline_med {
+  @include font-t-universe;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+
+@mixin title_01_Card_med {
+  @include font-t-universe;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: -1px;
+}
+
+@mixin title_02_Card_bold {
+  @include font-t-universe;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin etc_Badge_bold {
+  @include font-t-universe;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: -0.3px;
+}
+
+@mixin title_01_med {
+  @include font-pretendard;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -1px;
+}
+
+@mixin title_02_bold {
+  @include font-pretendard;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -1px;
+}
+
+@mixin body_03_bold {
+  @include font-pretendard;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+@mixin body_03_med {
+  @include font-pretendard;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+@mixin body_04_bold {
+  @include font-pretendard;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+
+
+@mixin body_05_bold {
+  @include font-pretendard;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -1px;
+}
+
+@mixin body_05_med {
+  @include font-pretendard;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -1px;
+}
+
+@mixin font-title-t-universe {
+  @include font-t-universe;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+
+@mixin font-title-t-universe {
+    @include font-t-universe;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 11px;
+    text-align: center;
+    letter-spacing: -0.3px;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin body_04_regular {
+  @include font-pretendard;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+@mixin hiddenLine($lineNum: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lineNum;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.icon {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+button {
+  cursor: pointer;
+}

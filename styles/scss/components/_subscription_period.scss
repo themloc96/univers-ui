@@ -1,0 +1,56 @@
+.subscription-period{
+	.scroll-subscription-period{
+		flex-direction: row;
+		overflow-y: hidden;
+		display: flex;
+		margin-top: 20px;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.list{
+			display: flex;
+			gap: 10px;
+			padding: 0 24px;
+			>button{
+				cursor: pointer;
+				border: none;
+				background: 0000;
+			}
+			.con{
+				background: $white-milk;
+				border-radius: 20px;
+				padding: 20px;
+				width: 210px;
+				.txt-percent{
+					@include pre-body-03-bold;
+					color: $black;
+					text-align: left;
+				}
+				.price{
+					display: flex;
+					align-items: center;
+					margin-top: 16px;
+					.txt-percent{
+						@include pre-body-04-bold;
+						color: $blue-dark;
+					}
+					.txt-price{
+						@include pre-body-04-bold;
+						color: $black;
+						margin-left: 2px;
+					}
+				}
+				.list-badge{
+					display: flex;
+					gap: 3px;
+					margin-top: 10px;
+					white-space: nowrap;
+					.badge-gray-1{
+						color: #0000007f;
+						background: $white;
+					}
+				}
+			}
+		}
+	}
+}

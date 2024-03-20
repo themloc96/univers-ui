@@ -1,0 +1,38 @@
+@import "../abstracts/spacing";
+@import "../layout/header";
+@import "../base/common";
+@import "../base/style";
+@import "../base/font";
+@import "../components/main_detail";
+@import "../components/component-page";
+@import "../components/recommend_product";
+@import "../components/subscription_period";
+@import "../components/inquiry";
+@import "../components/detail_info_img";
+@import "../components/detail_banner";
+@import "../components/list_product";
+@import "../components/icon";
+@import "../components/card_gift_received";
+@import "../components/skt";
+@import "../components/list_horizontal";
+@import "../components/rank";
+@import "../components/pass";
+@import "../components/context";
+@import "../components/package_keyword";
+.main-detail{
+	background: #fff;
+	position: relative;
+}
+
+
+.t-component-container .tabbar-detail {
+	position:absolute;
+}
+
+.img-banner-01{
+	margin-top:20px;
+}
+
+button{
+	color : #000;
+}

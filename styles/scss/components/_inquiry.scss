@@ -1,0 +1,236 @@
+@import "./buttons";
+.inquiry-list-wrap{
+	.title{
+		padding: 0 24px;
+    justify-content: space-between;
+		color: $black;
+		.txt-title{
+			@include t-title-01;
+			width: 220px;
+		}
+		.btn-txt-icon{
+			text-decoration: none;
+			color: $black;
+			height:30px;
+			align-items: center;
+			border: none;
+			background: transparent;
+			@include pre-body-05-bold;
+			display: flex;
+			i{
+				background: url("../../image/icon/ico-write-black.png");
+				background-repeat: no-repeat;
+				background-size: 14px 14px;
+				display: inherit;
+				width: 14px;
+				min-width: 14px;
+				height: 14px;
+				margin-left: 2px;
+			}
+		}
+	}
+	.list{
+		margin-top:16px;
+		margin-bottom:16px;
+		
+		.inquiry{
+			padding: 0 24px;
+			>.info{
+				padding: 20px 0;
+				border-top:1px solid $white-milk;
+			}
+			&:first-child{
+				margin-top: 0;
+				>.info{
+					border-top:none
+				}
+			}
+			
+			.txt-01{
+				display: flex;
+				justify-content: start;
+				//padding-top: 2px;
+				.txt-date{
+					@include pre-body-05-med;
+					margin-top:2px;
+				}
+				.txt-name{
+					@include pre-body-05-med;
+					color: $black;
+					margin-left: 6px;
+					margin-top:2px;
+				}
+				label{
+					margin-left: auto;
+					.badge-gray-1{
+						display: unset;
+					}
+					.badge-gray-2{
+						display: none;
+					}
+				}
+			}
+			.txt-02{
+				margin-top:10px;
+
+				.txt-type-product{
+					display: flex;
+					flex-direction: row;
+					gap: 4px;
+					@include pre-body-05-med;
+					.txt-type{
+						color: $black;
+
+					}
+					.txt-product{
+						color: $dark-gray;
+					}
+				}
+				.txt-title{
+					@include pre-body-04-bold;
+					margin-top:8px;
+					display: flex;
+					i{
+						background: url("../../image/icon/ico_lock.png");
+						background-repeat: no-repeat;
+						background-size: 20px 20px;
+						display: none;
+						width: 20px;
+						height: 20px;
+					}
+				}
+				.txt-lock{
+					@include pre-body-04-bold;
+					margin-top:8px;
+					display: flex;
+					i{
+						background: url("../../image/icon/ico_lock.png");
+						background-repeat: no-repeat;
+						background-size: 20px 20px;
+						display: flex;
+						width: 20px;
+						height: 20px;
+					}
+				}
+				.txt-info{
+					@include pre-body-04-reg;
+					margin-top:4px;
+					display: none;
+					flex-direction: column;
+				}
+			}
+			.btn{
+				display: none;
+				border: none;
+				background: transparent;
+				padding: 0;
+				justify-content: flex-end;
+				align-items: center;
+				margin-top: 20px;
+				button{
+					@include pre-body-05-med;
+					border: none;
+					background: transparent;
+					color: $dark-gray;
+				}
+				.column{
+					width: 1px;
+					height: 8px;
+					background: $dark-gray;
+					margin: 0 10px;
+				}
+			}
+
+			>.txt-reply{
+				padding: 12px 0 20px 0;
+				color: $black;
+				display: none;
+				>.title{
+					padding-top: 10px;
+					@include pre-body-05-med;
+				}
+				>.sub{
+					padding-top: 4px;
+					@include pre-body-04-reg;
+				}
+			}
+
+
+
+			&.show{
+				.txt-info{
+					display: flex;
+				}
+				&.my 
+				{
+					.txt-name{
+						color: $blue-dark;
+					}
+					.btn{
+						display: flex;
+					}
+				}
+				
+			}
+			&:not(.locked)
+			{
+				.txt-lock {
+					display: none;
+				}
+				&:not(.my){
+					.btn{
+						display: none;
+					}
+				}
+				&.show{
+					background-color: #F6F6F6;
+					.txt-reply{
+						display: block;
+					}
+				}
+
+			}
+			&.locked
+			{
+				.txt-title i{display: flex;}
+
+				&.my{
+					.txt-lock {
+						display: none;
+					}
+					.txt-title {
+						display: flex;
+					}
+				}
+				&:not(.my){
+					.txt-lock {
+						display: flex;
+					}
+					.txt-title {
+						display: none;
+					}
+					.txt-info {
+						display: none;
+					}
+				}
+			}
+			&.my 
+			{
+				.txt-name{
+					color: $blue-dark;
+				}
+				&.show{
+					background-color: #F6F6F6;
+				}
+
+			}
+			
+
+		}
+	}
+
+	.btn-all-stroke{
+		margin:0 24px;
+		width: -webkit-fill-available;
+	}
+}

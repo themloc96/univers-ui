@@ -1,0 +1,67 @@
+$blue-dark: #3617CE;
+$yellow: #FFB800;
+$yellow-dark: #ffcd4c;
+$blue-light: #0052FF;
+$white: #ffffff;
+$green: #3FBEA8;
+$pink: #F73E53;
+$navy: #0B1A59;
+$black: #000000;
+$grey-light: #EEEEEE;
+$grey-dark: #F8F8F8;
+
+
+
+
+
+$colors: (
+    'blue-dark': $blue-dark,
+    'yellow': $yellow,
+    'yellow-dark': $yellow-dark,
+    'blue-light': $blue-light,
+    'white': $white,
+    'green': $green,
+    'pink': $pink,
+    'navy': $navy,
+    'black': $black,
+    'grey-light': $grey-light,
+);
+
+// text color
+@each $color, $value in $colors {
+    .#{$color} {
+        color: $value !important;
+    }
+}
+// background color
+@each $color, $value in $colors {
+    .bg-#{$color} {
+        background-color: $value !important;
+    }
+}
+// border color
+@each $color, $value in $colors {
+    .border-#{$color} {
+        border: 1px solid $value !important;
+    }
+
+    .border-top-#{$color} {
+        border-top: 1px solid $value !important;
+    }
+
+    .border-bottom-#{$color} {
+        border-bottom: 1px solid $value !important;
+    }
+
+    .border-left-#{$color} {
+        border-left: 1px solid $value !important;
+    }
+
+    .border-right-#{$color} {
+        border-right: 1px solid $value !important;
+    }
+}
+
+.shadow-none {
+    box-shadow: none !important;
+}

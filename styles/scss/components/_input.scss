@@ -1,0 +1,636 @@
+@import "../base/common.scss";
+
+/* input-default */
+.input-field {
+  border: none;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  padding-right: 22px;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background: $white-milk;
+  border: 2px solid $white-milk;
+  border-radius: 30px;
+  min-height: 84px;
+  .form-control-label {
+    opacity: 1;
+    color: $gray;
+    @include pre-body-05-med;
+    margin-top: 23px;
+    margin-bottom: 4px;
+  }
+  input.form-control {
+    &:focus {
+      outline: none;
+    }
+  }
+  .image-wrap {
+    height: 44px;
+    width: 44px;
+    margin-right: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    img {
+      height: 44px;
+      width: 44px;
+    }
+  }
+}
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+input.form-control {
+  @include pre-body-03-med;
+  width: 100%;
+  background: $white-milk;
+  box-sizing: border-box;
+  border: none;
+  color: $black;
+  // -webkit-text-fill-color: rgb(0, 0, 0);
+  padding: 0;
+  margin-bottom: 23px;
+}
+
+.input-default {
+  position: relative;
+  background: $white-milk;
+  display: flow-root;
+  border-radius: 30px;
+  box-sizing: border-box;
+  height: 84px;
+  border: 2px solid transparent;
+  transition: background-color 0.2s cubic-bezier(0.33, 1, 0.68, 1),
+    border-color 0.2s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.2s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+  input {
+    border: none;
+    background: transparent;
+    margin-top: 4px;
+    margin-left: 24px;
+    padding: 0;
+    @include pre-body-03-med;
+    color: $black;
+    width: calc(100% - 50px);
+    &::placeholder {
+      color: $dark-gray;
+    }
+    &:focus-visible {
+      outline: none;
+      .input-default {
+        background: $white !important;
+      }
+    }
+  }
+
+  span {
+    @include pre-body-05-med;
+    color: $black;
+    opacity: 0.2;
+    margin-top: 23px;
+    margin-left: 24px;
+    display: block;
+  }
+
+  &:focus-within {
+    background: $white;
+    border: 2px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.15s cubic-bezier(0.33, 1, 0.68, 1),
+      border-color 0.15s cubic-bezier(0.33, 1, 0.68, 1),
+      box-shadow 0.15s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+    input {
+      background: $white;
+      margin-left: 24px;
+    }
+    span {
+      margin-top: 23px;
+      margin-left: 24px;
+    }
+  }
+}
+
+.input-default.select.has-value {
+  span {
+    color: $black;
+  }
+}
+
+.input-default.select {
+  span {
+    @include pre-body-03-med;
+    color: $black;
+    margin-top: 4px;
+    margin-left: 24px;
+    display: block;
+  }
+  position: relative;
+  select {
+    display: none;
+  }
+  input {
+    opacity: 0;
+  }
+  &::after {
+    content: "";
+    background: url("../../image/icon/btn_dropdown_default.png");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    display: inherit;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 34px;
+    transform: var(--after-transform);
+  }
+}
+
+.input-default.has-error {
+  &:focus-within {
+    border: 2px solid $red;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    input {
+      margin-left: 24px;
+      background: $white;
+    }
+    span {
+      margin-top: 23px;
+      margin-left: 24px;
+    }
+    &::after {
+      opacity: 0;
+      transition: opacity 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+  }
+  &::after {
+    content: "";
+    opacity: 1;
+    background: url("../../image/icon/ico-error.png");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    display: inherit;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 24px;
+    top: 33px;
+    transition: opacity 0.2s cubic-bezier(0.5, 1, 0.89, 1) 0.3s;
+  }
+}
+
+.input-default.resident {
+  .cross {
+    @include t-title-03;
+    color: $black;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+  }
+  .input-2 {
+    margin-left: 0;
+    width: 10px;
+    display: none;
+  }
+  .dot {
+    @include pre-body-03-med;
+    color: $black;
+    display: none;
+    margin-right: -22px;
+  }
+}
+
+
+.input-label {
+  position: relative;
+  background: $white-milk;
+  display: flow-root;
+  border-radius: 30px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  transition: /*background-color 0.2s cubic-bezier(0.33, 1, 0.68, 1),*/
+    border-color 0.2s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.2s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+  input {
+    border: none;
+    background: transparent;
+    padding: 0;
+    @include pre-body-03-med;
+    color: $black;
+    width: calc(100% - 50px);
+    &::placeholder {
+      color: $dark-gray;
+    }
+    &:focus-visible {
+      outline: none;
+      .input-default {
+        background: $white !important;
+      }
+    }
+  }
+
+  span {
+    @include pre-body-05-med;
+    color: $black;
+    opacity: 0.2;
+    margin-top: 23px;
+    margin-left: 24px;
+    display: block;
+  }
+
+  &:focus-within {
+    background: $white;
+    border: 2px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    transition: /*background-color 0.15s cubic-bezier(0.33, 1, 0.68, 1),*/
+      border-color 0.15s cubic-bezier(0.33, 1, 0.68, 1),
+      box-shadow 0.15s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+    input {
+      background: $white;
+      // margin-left: 24px;
+    }
+    span {
+      // margin-top: 23px;
+      // margin-left: 24px;
+    }
+  }
+}
+
+.input-lable.select.has-value {
+  span {
+    color: $black;
+  }
+}
+
+.input-label.select {
+  span {
+    @include pre-body-03-med;
+    color: $black;
+    margin-top: 4px;
+    margin-left: 24px;
+    display: block;
+  }
+  position: relative;
+  select {
+    display: none;
+  }
+  input {
+    opacity: 0;
+  }
+  &::after {
+    content: "";
+    background: url("../../image/icon/btn_dropdown_default.png");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    display: inherit;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 34px;
+    transform: var(--after-transform);
+  }
+}
+
+.input-label.has-error {
+  &:focus-within {
+    border: 2px solid $red;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    input {
+      margin-left: 24px;
+      background: $white;
+    }
+    span {
+      margin-top: 23px;
+      margin-left: 24px;
+    }
+    &::after {
+      opacity: 0;
+      transition: opacity 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+  }
+  &::after {
+    content: "";
+    opacity: 1;
+    background: url("../../image/icon/ico-error.png");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    display: inherit;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 24px;
+    top: 33px;
+    transition: opacity 0.2s cubic-bezier(0.5, 1, 0.89, 1) 0.3s;
+  }
+}
+
+.input-label.resident {
+  .cross {
+    @include t-title-03;
+    color: $black;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+  }
+  .input-2 {
+    margin-left: 0;
+    width: 10px;
+    display: none;
+  }
+  .dot {
+    @include pre-body-03-med;
+    color: $black;
+    display: none;
+    margin-right: -22px;
+  }
+}
+
+// .input-default.active.select {
+//   &::after {
+//     right: 18px;
+//     top: 32px;
+//   }
+// }
+
+.t-compnent-description {
+  font-family: monospace;
+  padding: 16px 0;
+  font-size: 12px;
+  span.red {
+    color: #f73e53;
+    font-weight: 700;
+  }
+}
+
+.input-text {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+
+  .txt-guide-error {
+    display: none;
+    color: #ff0000;
+    margin-top: 8px;
+    margin-left: 16px;
+    @include font-package("Pretendard", normal, 500, 12px, 14px, -1px);
+  }
+
+  label {
+    height: 52px;
+    border: none;
+    border-radius: 18px;
+    display: flow-root;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: #f6f6f6;
+    > input {
+      border: none;
+      background-color: inherit;
+      width: 100%;
+      height: 100%;
+      padding: 16px 20px;
+      @include font-package("Pretendard", normal, 400, 14px, 20px, -1px);
+      outline-style: none;
+      caret-color: #3617ce;
+      &::placeholder {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  &:focus-within {
+    label {
+      border: 2px solid #000000;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+  &.error {
+    label {
+      border: 2px solid #ff0000;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+    .txt-guide-error {
+      display: block;
+    }
+  }
+}
+
+.input-text-large {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  position: relative;
+  .txt-guide-error {
+    display: none;
+    color: #ff0000;
+    margin-top: 8px;
+    margin-left: 16px;
+    @include font-package("Pretendard", normal, 500, 12px, 14px, -1px);
+  }
+
+  label {
+    height: 190px;
+    border: none;
+    border-radius: 18px;
+    display: flow-root;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: #f6f6f6;
+    padding: 18px 20px 50px 20px;
+    textarea {
+      border: none;
+      background-color: inherit;
+      width: 100%;
+      height: 100%;
+      resize: none;
+      @include font-package("Pretendard", normal, 400, 14px, 20px, -1px);
+      outline-style: none;
+      caret-color: #3617ce;
+      &::placeholder {
+        color: $dark-gray;
+      }
+    }
+  }
+  &:focus-within {
+    label {
+      border: 2px solid #000000;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+  &.error {
+    label {
+      border: 2px solid #ff0000;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+    .txt-guide-error {
+      display: block;
+    }
+  }
+  .txt-character-counter {
+    @include pre-body-05-med;
+    color: $dark-gray;
+    position: absolute;
+    top :158px;
+    right: 20px;
+    span {
+      opacity: 0.5;
+    }
+  }
+}
+
+.input-contact {
+  .txt_title {
+    @include font-package("Pretendard", normal, 700, 14px, 20px, -1px);
+    width: 35px;
+    margin-right: 14px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 14px;
+  }
+  .input-text {
+    display: inline-block;
+    width: calc(100% - 52px);
+    vertical-align: top;
+  }
+  .txt-guide-error {
+    display: none;
+    color: #ff0000;
+    margin-top: 8px;
+    margin-left: 16px;
+    @include font-package("Pretendard", normal, 500, 12px, 14px, -1px);
+  }
+
+  //default
+  label {
+    height: 52px;
+    border: none;
+    border-radius: 18px;
+    display: flow-root;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: #f6f6f6;
+    > input {
+      border: none;
+      background-color: inherit;
+      width: 100%;
+      height: 100%;
+      padding: 16px 20px;
+      @include font-package("Pretendard", normal, 400, 14px, 20px, -1px);
+      outline-style: none;
+      caret-color: #3617ce;
+      &::placeholder {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  &:focus-within {
+    label {
+      border: 2px solid #000000;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &.error {
+    label {
+      border: 2px solid #ff0000;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+    .txt-guide-error {
+      display: block;
+    }
+  }
+}
+
+.input-register {
+  // width: auto;
+  background: #f6f6f6;
+  border-radius: 18px;
+  // padding: 14px 20px 14px 24px;
+  margin-left: 12px;
+  margin-right: 12px;
+  position: relative;
+  label {
+    position: relative;
+    background: $white-milk;
+    display: flow-root;
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    padding: 14px 20px;
+    &:focus-within {
+      background: inherit;
+      border: 2px solid inherit;
+      box-shadow: none;
+      transition: /*background-color 0.15s cubic-bezier(0.33, 1, 0.68, 1),*/
+        border-color 0.15s cubic-bezier(0.33, 1, 0.68, 1),
+        box-shadow 0.15s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+      input {
+        
+        // margin-left: 24px;
+      }
+      span {
+        // margin-top: 23px;
+        // margin-left: 24px;
+      }
+    }
+
+
+
+  }
+  input {
+    border: none;
+    background: transparent;
+    @include pre-body-04-reg;
+    font-style: normal;
+    color: $black;
+    width: 220px;
+    outline: none;
+
+
+    // padding: 2px 0;
+    &::placeholder {
+      color: #a0a0a0;
+    }
+  }
+  button {
+    border: 0;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    @include font-package("Pretendard", normal, 700, 12px, 14px, -1px);
+    padding: 5px 8px;
+    background-color: #eee;
+    color: #a0a0a0;
+    border-radius: 12px;
+  }
+  &.btn-disable {
+    button {
+      cursor :default;
+    }
+  }
+  
+  &.btn-able {
+    button {
+      background-color: #000;
+      color: #fff;
+
+    }
+  }
+}

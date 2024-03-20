@@ -1,0 +1,43 @@
+@import "../base/font";
+@import "../base/style";
+@import "../components/buttons";
+@import "../main";
+@import "../base/common.scss";
+
+.error{
+	&.contents{
+		padding-top: 64px;
+		.txt-bodycopy-day{
+			@include pre-body-04-bold;
+			color: $black;
+			margin: 20px 24px 0 24px;
+		}
+		.txt-bodycopy {
+			@include pre-body-04-reg;
+			color: $black;
+			margin: 6px 24px 0 24px;
+		}
+		.img-error-02 {
+			height : calc(100vh - 362px);
+			min-height: 310px;
+			margin: 0 24px;
+			padding: 30px 0;
+			position: relative;
+			> img {
+				min-width: 312px;
+				width: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				max-width: calc(100vh - 362px);
+				transform: translate(-50%, -50%);
+			}
+		}
+		.btn-bottom-background{
+			position: fixed;
+			left: 0%;
+			right: 0%;
+			bottom: 0%;
+		}
+	}
+}

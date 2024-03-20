@@ -1,0 +1,52 @@
+@import "../base/font";
+@import "../base/style";
+@import "../components/buttons";
+@import "../main";
+@import "../base/common.scss";
+
+.error{
+	&.contents{
+		padding-top: 68px;
+		.title {
+			font-size: 28px;
+			line-height: 32px
+		}
+		.txt-bodycopy{
+			@include pre-body-04-reg;
+			color: $black;
+			margin: 10px 24px 0 24px;
+		}
+		.img-prd-notfound {
+			height : calc(100vh - 272px);
+			min-height: 338px;
+			margin: 0 24px;
+			position: relative;
+			> div {
+				width: 100%;
+				position: absolute;
+				top: 52%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				overflow: hidden;
+				>img{
+					min-width: 312px;
+					width: 100%;
+					margin: 30px 0;
+					margin-left: 50%;
+					max-width: calc(100vh - 272px);
+					transform: translateX(-50%);
+				}
+				>.box-button{
+					display: flex;
+					justify-content: center;
+					margin-top: 60px;
+					.btn-sub-task-48px{
+						margin-bottom: 30px;
+						padding: 0 30px;
+					}
+				}
+			}
+			
+		}
+	}
+}

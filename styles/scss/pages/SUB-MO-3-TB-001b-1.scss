@@ -1,0 +1,105 @@
+@import "./SUB-MO-3-TB-001b";
+
+.card-noti {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 40px);
+  padding-top: 83px;
+  margin: 0 12px;
+}
+
+main {
+  padding-top: 0;
+
+  .top{
+    position: relative;
+    .title {
+      padding: 0;
+      max-width: 230px;
+      display: block;
+      padding-top: 0px;
+      margin-left: 24px;
+      @include font-package("T Universe Sans TTF", normal, 500, 28px, 32px, -1px);
+  
+      > .txt_username {
+        max-width: 140px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    .btn-toggle{
+      display: inline-block;
+      width: 86px;
+      height: 27px;
+      border-radius: 100px;
+      background-color : #eee;
+      font-size: 0;
+
+      position: absolute;
+      bottom: 0;
+      right: 24px;
+
+      >button{
+        font-size: 0;
+        color : #a0a0a0;
+        margin: 2px;
+        border: none;
+        background: none;
+        border-radius: 100px;
+        cursor: pointer;
+        >span{
+          @include font-package('Pretendard',normal, 500, 12px, 14px, -1px);
+          display: inline-block;
+          width: 30px;
+          height: 14px;
+        }
+        &:first-child{
+          margin-right: 0px;
+        }
+        &:last-child{
+          margin-left: 0px;
+        }
+        &.on{
+          background-color: #fff;
+          color: #000;
+          padding: 5px 6px 4px;
+        }
+        &.off{
+          padding: 5px 6px 4px 4px;
+
+          &:first-child{
+            padding-left: 6px;
+            padding-right: 4px;
+          }
+          &:last-child{
+            padding-right: 6px;
+            padding-left: 4px;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+
+
+  .card_product a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .card-product a {
+    display: inline-block;
+    height: 100%;
+  }
+  .card_product-category a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+
+
+}
+.card_product .btn-header-barcode {
+  display: none;
+}

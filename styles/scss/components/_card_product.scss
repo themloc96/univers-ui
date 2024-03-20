@@ -1,0 +1,422 @@
+.badge-num-block {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  > h6 {
+    @include font-package(
+      "T Universe Sans TTF",
+      normal,
+      700,
+      10px,
+      11px,
+      -0.3px
+    );
+    color: #fff;
+    padding: 4px 2px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.card_product-category {
+  a {
+    display: block;
+    cursor: pointer;
+  }
+
+  .item {
+    padding: 28px 30px 28px 30px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1),
+      inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    > *:not(.acnchor) {
+      max-width: 200px;
+    }
+    > .txt_category {
+      margin: 0;
+      @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+    }
+    > .txt_sub {
+      margin: 0;
+      display: inline-block;
+      margin-top: 2px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      @include font-package("Pretendard", normal, 400, 14px, 20px, -1px);
+      > span {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    &:active {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  .item + .item {
+    margin-top: 7px;
+  }
+}
+
+.card_product {
+  a {
+    display: block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(246, 246, 246, 0.5);
+  }
+  .item {
+    padding: 24px 24px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1),
+      inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+    > * {
+      display: inline-block;
+      vertical-align: top;
+    }
+    > .thumb-logo {
+      width: 32px;
+      height: 32px;
+      margin-top: 4px;
+      position: relative;
+      > .obj {
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        width: 32px;
+        height: 32px;
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      > .badge-num-block {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+      }
+    }
+    > .txt {
+      max-width: 180px;
+      margin-left: 16px;
+      > .txt_name {
+        margin: 0;
+        @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        // -webkit-line-clamp: 1;
+        // -webkit-box-orient: vertical;
+
+        /*ie 고려*/
+        max-height: 40px;
+      }
+      > .txt_status {
+        margin: 0;
+        padding-top: 6px;
+        @include font-package("Pretendard", normal, 500, 12px, 14px, -1px);
+      }
+      > .txt_status {
+        color: #a0a0a0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        > i {
+          font-size: 0;
+          display: inline-block;
+          width: 1px;
+          height: 8px;
+          background-color: #a0a0a0;
+          margin: 0 6px;
+        }
+        > span {
+          margin-left: 3px;
+        }
+      }
+    }
+    > .btn-header-barcode {
+      float: right;
+      margin-top: 8px;
+      margin-right: 4px;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background: none;
+      border: 0;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    > .btn-header-arrow {
+      float: right;
+      margin-top: 8px;
+      margin-right: 4px;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background: none;
+      border: 0;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &:active {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .item + .item {
+    margin-top: 7px;
+  }
+  .group {
+    padding: 20px 12px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1),
+      inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+    > .item {
+      margin-top: 0px;
+      border-radius: 20px;
+      box-shadow: none;
+      padding: 11px 12px;
+      > .txt {
+        > .txt_status {
+          color: #a0a0a0;
+          > i {
+            font-size: 0;
+            display: inline-block;
+            width: 1px;
+            height: 8px;
+            background-color: #a0a0a0;
+            margin: 0 6px;
+          }
+          > span {
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+    .item + .item {
+      margin-top: 8px;
+    }
+  }
+
+  .group-all {
+    @extend .group;
+    padding: 20px 12px 0px;
+    overflow: hidden;
+    > .all-view {
+      color: #000;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      border: 0;
+      border-top: 1px solid #f6f6f6;
+
+      background-color: #fff;
+      width: 100%;
+      > div {
+        cursor: pointer;
+        padding-top: 14px;
+        text-align: center;
+        > * {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        > .txt {
+          @include font-package("Pretendard", normal, 700, 14px, 20px, -1px);
+        }
+        > img {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  .toucharea:active {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+}
+
+.card-nudge {
+  @extend .card_product;
+  > .item {
+    > .txt {
+      margin-left: 14px;
+      .txt_sub {
+        color: #000;
+        > i {
+          font-size: 0;
+          display: inline-block;
+          width: 1px;
+          height: 8px;
+          background-color: #a0a0a0;
+          margin: 0 6px;
+        }
+        > span {
+          margin-left: 3px;
+        }
+
+        margin-top: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-top: 0;
+        @include font-package("Pretendard", normal, 400, 14px, 20px, -1px);
+      }
+      .txt_num_26,
+      .txt_num_50,
+      .txt_num_70 {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: top;
+      }
+      .txt_num_26 {
+        max-width: 26px;
+      }
+      .txt_num_50 {
+        max-width: 50px;
+        margin-left: 2px;
+      }
+      .txt_num_70 {
+        max-width: 70px;
+      }
+    }
+    > .card-nudge {
+      float: right;
+      padding: 5px 8px;
+      background-color: #000;
+      border-radius: 12px;
+      margin-top: 8px;
+      margin-left: 16px;
+      border: 0;
+      cursor: pointer;
+      > p {
+        color: #fff;
+        @include font-package("Pretendard", normal, 700, 12px, 14px, -1px);
+      }
+    }
+  }
+}
+
+.card-noti {
+  .item {
+    padding: 19px 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1),
+      inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    > * {
+      display: inline-block;
+      vertical-align: top;
+    }
+    > .ico-error {
+      width: 18px;
+      height: 18px;
+      margin-top: 12px;
+      position: relative;
+      border-radius: 50%;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    > .txt {
+      margin: 0 12px 0 13px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      > * {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      > .txt_main {
+        margin: 0;
+        @include font-package("Pretendard", normal, 700, 16px, 20px, -1px);
+        max-width: 180px;
+        color: #ff0000;
+      }
+      > p {
+        margin: 0;
+        @include font-package("Pretendard", normal, 400, 14px, 20px, -1px);
+        max-width: 234px;
+      }
+
+      .txt_num_18,
+      .txt_coupon,
+      .txt_username_27,
+      .txt_username {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: top;
+      }
+      .txt_num_18 {
+        max-width: 18px;
+      }
+      .txt_coupon {
+        max-width: 27px;
+      }
+      .txt_username_27 {
+        max-width: 27px;
+      }
+      .txt_username {
+        max-width: 46px;
+      }
+    }
+    > .btn-header-barcode {
+      float: right;
+      margin-top: 12px;
+      padding-right: 0;
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      background: none;
+      border: 0;
+      overflow: hidden;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &:active {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  .item + .item {
+    margin-top: 7px;
+  }
+}
+
+.acnchor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  cursor: pointer;
+}

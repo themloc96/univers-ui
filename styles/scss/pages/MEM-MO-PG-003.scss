@@ -1,0 +1,156 @@
+@import "../components/buttons";
+@import "../components/toast_popup";
+@import "../base/common.scss";
+@import "../components/input";
+@import "../base/font";
+@import "../layout/header";
+@import "../components/layout";
+@import "../components/title";
+@import "../layout/footer";
+
+.form {
+  margin: 40px 12px 150px 12px;
+  .space_between {
+    justify-content: space-between;
+  }
+}
+.form-group {
+  margin: 0;
+}
+.txt {
+  @include pre-body-05-med;
+}
+.txt.bold {
+  @include pre-body-04-bold;
+}
+.input-field {
+  box-sizing: border-box;
+  background: $white-milk;
+  border-radius: 30px;
+  min-height: 84px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+  padding-right: 18px;
+  align-content: center;
+  justify-content: center;
+  border: 2px solid $white-milk;
+  .form-control-label {
+    color: $black;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -1px;
+    opacity: 0.2;
+    margin-bottom: 4px;
+  }
+}
+input.form-control {
+  @include pre-body-03-med;
+  width: 100%;
+  background: $white-milk;
+  box-sizing: border-box;
+  border: none;
+  color: $black;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-input-placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    color: $dark-gray;
+  }
+  &::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    color: $dark-gray;
+  }
+}
+.form-group {
+  &.space-between {
+    justify-content: space-between;
+    padding-right: 16px;
+    padding-left: 12px;
+  }
+  .txt-notice {
+    &.has-error{
+      color: red;
+    }
+    margin-top: 23px;
+  }
+  .btn-resend {
+    margin-top: 18px !important;
+  }
+}
+
+.form-group.active {
+  .input-field {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    background: $white;
+    border: 2px solid #000000;
+    input.form-control {
+      background: $white !important;
+    }
+  }
+}
+.form-group.has-error {
+  .input-field {
+    background: $white !important;
+    border: 2px solid $red !important;
+    input.form_control {
+      background: $white !important;
+    }
+  }
+}
+.btn.btn-fit {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+  border-radius: 30px;
+  padding: 5px 8px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 14px;
+  order: 0;
+  flex-grow: 0;
+  width: fit-content;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  min-width: 46px;
+  position: absolute;
+  right: 28px;
+}
+
+
+.d-flex {
+  span {
+    margin-top: 4px;
+    margin-right: 24px;
+    opacity: 1;
+  }
+}
+
+.input-default:focus-within .d-flex span {
+  margin-top: 4px;
+  margin-right: 24px;
+}
+
+.input-default.has-error::after {
+  content: "";
+  opacity: 1;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  display: inherit;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 24px;
+  top: 33px;
+  transition: opacity 0.2s cubic-bezier(0.5, 1, 0.89, 1) 0.3s;
+}

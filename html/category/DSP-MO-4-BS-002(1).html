@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html lang="ko">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no,minimal-ui"
+    />
+    <meta charset="utf8" />
+    <title>DSP-MO-4-BS-002(1)</title>
+    <link rel="stylesheet" href="../../styles/css/category.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"
+      integrity="sha512-v/m68W+vaGN/6igoyFpd4GlQzu0jx9/n5gr2PKq5vif+RObyGKHse384YHrOULaxZ810XhlHUrmB3U8UnPB19Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <div class="category category-dsp-mo-4-bs-002">
+      <header>
+        <div class="header">
+          <!-- btn-header-back -->
+          <div class="list-header-button">
+            <div>
+              <a href="#" class="btn-header-home"><i></i></a>
+            </div>
+            <div>
+              <a href="#" class="btn-header-search"><i></i></a>
+            </div>
+            <div>
+              <a href="#" class="btn-header-cart"><i></i><label>2</label></a>
+            </div>
+          </div>
+          <a href="#" class="btn-header-back">
+            <!-- icon-back -->
+            <i class="icon-back"></i>
+          </a>
+        </div>
+      </header>
+      <div class="popup-dropdown popup-bottomsheet show">
+        <div class="background"></div>
+        <!-- bottomsheet 에 filter 영역 추가시 -->
+        <div class="bottomsheet filter popup-dropdown-body">
+          <div class="header-bottomsheet">
+            <button class="btn-header-close">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+          <div class="body">
+            <div class="tab-fixed">
+              <div class="tab-category">
+                <!--button 에 checked 추가시 버튼 표출-->
+                <button
+                  id="sort_tab"
+                  class="active"
+                >
+                  <div class="txt"><span>상품유형</span></div>
+                </button>
+                <button id="price_tab">
+                  <div class="txt"><span>가격</span></div>
+                </button>
+                <button
+                  id="benefits_tab"
+                >
+                  <div class="txt"><span>혜택</span></div>
+                </button>
+                <button
+                  id="subscribe_tab"
+                >
+                  <div class="txt"><span>구독주기</span></div>
+                </button>
+              </div>
+            </div>
+
+            <div class="btn-product contentArea" id="sort">
+              <div class="tab-swipe">
+                <div class="tabs">
+                  <button class="btn-med active">
+                    전체
+                  </button>
+                  <button class="btn-med">
+                    단일상품
+                  </button>
+                  <button class="btn-med">
+                    패스
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="list-button contentArea" id="sort">
+              <label class="btn-bottomsheet-filter">
+                <input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>쿠폰</span>
+              </label>
+              <label class="btn-bottomsheet-filter">
+                <input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>이용권</span>
+              </label>
+              <label class="btn-bottomsheet-filter">
+                <input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>할인 바코드</span>
+              </label>
+              <label class="btn-bottomsheet-filter">
+                <input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>정기배송</span>
+              </label>
+              <label class="btn-bottomsheet-filter">
+                <input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>랜탈</span>
+              </label>
+            </div>
+
+            <div class="slider contentArea" id="price" style="display: none">
+              <div class="txt-result-default">
+                <p>0 원 ~ 10만 원</p>
+              </div>
+              <div class="range">
+                <div class="range-slider">
+                  <span class="range-selected"></span>
+                </div>
+                <div class="range-input">
+                  <input
+                    type="range"
+                    class="min"
+                    min="0"
+                    max="10"
+                    value="0"
+                    step="1"
+                  />
+                  <input
+                    type="range"
+                    class="max"
+                    min="0"
+                    max="10"
+                    value="10"
+                    step="1"
+                  />
+                </div>
+                <!-- <div class="range-price">      
+										<label for="min">Min</label>
+										<input type="number" name="min" value="4">      
+										<label for="max">Max</label>
+										<input type="number" name="max" value="6">      
+									</div> -->
+              </div>
+            </div>
+
+            <div
+              class="list-button contentArea"
+              id="benefits"
+              style="display: none"
+            >
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>첫 달 할인</span>
+              </label>
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>SKT 고객 할인</span>
+              </label>
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>무료배송</span>
+              </label>
+            </div>
+
+            <div
+              class="list-button contentArea"
+              id="subscribe"
+              style="display: none"
+            >
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>1주</span>
+              </label>
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>2주</span>
+              </label>
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>1개월</span>
+              </label>
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>2개월</span>
+              </label>
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>3개월</span>
+              </label>
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>6개월</span>
+              </label>
+              <label class="btn-bottomsheet-filter"
+                ><input
+                  class="btn-radio"
+                  type="checkbox"
+                />
+                <span>1년</span>
+              </label>
+            </div>
+          </div>
+          <div class="btn-main-task-bottomsheet">
+            <div class="filter-option">
+              <div class="btn-reset">
+                <button class="btn-filter-reset">
+                  <i></i>
+                </button>
+              </div>
+              <div class="btn-filter-scroll">
+                <div class="btn-filter-options">
+                  <!--<button class="btn-filter-option"><span>단일상품</span><i onclick="itemDelete(this)"></i></button>
+									<button class="btn-filter-option"><span>쿠폰</span><i onclick="itemDelete(this)"></i></button>
+									<button class="btn-filter-option"><span>정기배송</span><i onclick="itemDelete(this)"></i></button>-->
+                </div>
+              </div>
+            </div>
+            <!--bg-black 버튼 제거 후 disabled 클래스 추가시 disabled 상태 버튼으로 변경  -->
+            <button type="button" class="btn-main-task bg-black">
+              <div class="txt"><span>99,999</span><span>개</span><span>상품 보기</span></div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="btn-dd-floating"><i class="top"></i></button>
+    </div>
+    
+    <script type="text/javascript" src="../../scripts/untils.js"></script>
+    <script type="text/javascript" src="../../scripts/dsp-mo-4-bs-002-1.js"></script>
+    <script
+      type="text/javascript"
+      src="../../scripts/dsp-mo-4-bs-002.js"
+    ></script>
+  </body>
+</html>

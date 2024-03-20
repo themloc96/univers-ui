@@ -1,0 +1,66 @@
+@import "../layout/header";
+@import "../base/style";
+@import "../base/font";
+@import "../base/common";
+@import "../abstracts/spacing";
+@import "../components/layout";
+@import "../components/banner";
+@import "../components/buttons";
+@import "../components/popup_dropdown";
+@import "../components/input";
+@import "../components/icon";
+@import "../components/toast_popup";
+
+
+  .cmp-mo-6-bs-001 {
+    
+    &.popup-dropdown {
+      .popup-dropdown-body {
+        .txt-title {
+
+          color: $black;
+          @include font-package("Pretendard", normal, 700, 18px, 24px, -1px);
+          padding: 0 24px;
+          margin-bottom: 16px;
+        }
+      }
+      ul {
+        &.listOptions {
+
+
+          padding-top: 0;
+          height: 382px;
+          overflow: auto;
+          cursor: pointer;
+          overscroll-behavior: contain;
+          -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar{
+            display: none;
+          }
+          >li{
+            position: relative;
+            width: calc(100% - 24px);
+            margin-right: 20px;
+            padding: 20px 44px 20px 24px !important;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            gap: 0;
+            display: inline-block;
+            >i{
+              position: absolute;
+              top : 18px;
+              right: 0;
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+

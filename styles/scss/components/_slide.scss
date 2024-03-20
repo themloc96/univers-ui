@@ -1,0 +1,49 @@
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+@keyframes topToDown {
+	0% {
+		transform: translate(0px, -30px);
+	}
+	50% {
+		transform: translate(0px, 0px);
+	}
+	100% {
+		transform: translate(0px, -30px);
+	}
+}
+@keyframes downToTop {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	50% {
+		transform: translate(0px, -30px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
+.card.top {
+	margin-bottom: 30px;
+}
+.card.bottom {
+	margin-bottom: 0px;
+}
+.topToDown {
+	animation: topToDown 4s linear infinite;
+}
+.downToTop {
+	animation: downToTop 4s linear infinite;
+}
+.card-box {
+    animation: marquee 20s linear infinite;
+}
+.card-body:active .card-box {
+	animation-play-state: paused;
+}

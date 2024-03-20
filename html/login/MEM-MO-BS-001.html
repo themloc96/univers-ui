@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html lang="ko">
+  <head>
+    <title>MEM-MO-BS-001</title>
+    <meta charset="UTF-8" />
+    <title>MEM-MO-BS-001</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no"
+    />
+    <link rel="stylesheet" href="../../styles/css/MEM-MO-PG-001.css" />
+  </head>
+  <body>
+    <!-- component : tab header -->
+    <div class="tab-header">
+      <button class="btn-header-back"><i class="icon-back"></i></button>
+    </div>
+    <div class="contents">
+      <div class="container login">
+        <!-- component : title -->
+        <h1 class="title">
+          본인 명의의<br />
+          휴대폰을<br />
+          인증해 주세요<br />
+        </h1>
+
+        <!-- component : title -->
+        <button
+          class="btn-txt-arrow"
+          onclick="ConfirmAlert(`'T 우주’에서 ‘PASS'을(를) 열려고 합니다.`)"
+        >
+          <samp>PASS 인증하고 간편하게 이용하기</samp>
+          <i class="icon"></i>
+        </button>
+
+        <form class="form">
+          <!-- component : input -->
+          <div class="input-default name">
+            <label>이름</label>
+            <input
+              class="nameInput"
+              type="text"
+              name="name"
+              message="이름을 입력해 주세요"
+              placeholder="이름을 입력해 주세요"
+              tabindex="1"
+            />
+          </div>
+
+          <!-- component : input -->
+          <div class="input-default resident">
+            <label>주민등록번호</label>
+            <input
+              type="tel"
+              name="birth_date_1"
+              message="생년월일 및 주민등록번호 뒤 1자리까지 입력해 주세요."
+              class="input-1"
+              maxlength="6"
+              tabindex="2"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              placeholder="생년월일 6자리"
+            /><span class="cross">-</span
+            ><input
+              name="birth_date_2"
+              message="생년월일 및 주민등록번호 뒤 1자리까지 입력해 주세요."
+              type="tel"
+              class="input-2"
+              maxlength="1"
+              tabindex="3"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            /><span class="dot">******</span>
+          </div>
+
+          <!-- component : input -->
+          <div class="input-default select">
+            <label>통신사</label>
+            <span></span>
+            <input tabindex="4" />
+            <select name="" value="SKT">
+              <option>SKT</option>
+              <option>KT</option>
+              <option>LG U+</option>
+              <option>SKT 알뜰폰</option>
+              <option>KT 알뜰폰</option>
+              <option>LG U+ 알뜰폰</option>
+            </select>
+          </div>
+
+          <!-- component : input -->
+          <div class="input-default phone">
+            <label>휴대전화번호</label>
+            <input
+              type="tel"
+              name="phone"
+              message="휴대전화 번호를 입력해 주세요."
+              class="phonenumber"
+              tabindex="5"
+              placeholder="‘-’를 제외하고 입력해 주세요"
+            />
+          </div>
+
+          <!-- component : title -->
+          <a href="#" class="sub-title bottom">
+            <samp>[필수] 본인 인증 서비스 약관</samp>
+            <i class="icon"></i>
+          </a>
+
+          <!-- component : button -->
+          <div class="btn-bottom-background">
+            <button type="button" class="btn btn-main-task-login">
+              약관에 동의하고 다음
+              <span>
+                <lottie-player src="../../image/icon/loading-animation-60-white.json" speed="1" loop autoplay background="transparent"></lottie-player>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- component : popup dropdown -->
+    <div class="popup-dropdown">
+      <div class="background"></div>
+      <div class="body">
+        <div class="head">
+          <button class="btn-header-close"><i class="icon-close"></i></button>
+        </div>
+        <h1 class="popup-title">통신사를 선택해 주세요</h1>
+        <ul>
+          <li class="active">SKT</li>
+          <li>KT</li>
+          <li>LG U+</li>
+          <li>SKT 알뜰폰</li>
+          <li>KT 알뜰폰</li>
+          <li>LG U+ 알뜰폰</li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="../../scripts/authentication.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+@import "../components/buttons";
+@import "../components/input";
+@import "../components/title";
+@import "../components/layout";
+@import "../base/font";
+@import "../layout/header";
+@import "../components/buttons";
+@import "../components/_category_menu_scroll";
+@import "../components/list_category";
+@import "../components/search";
+@import "../components/tabbar_bottom";
+@import "../components/banner.scss";
+@import "../base/common.scss";
+.form-group {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.input-field {
+  padding-right: 24px;
+  padding-left: 20px;
+  border: none;
+}
+.sub-title {
+  @include pre-body-04-reg;
+  padding: 12px 24px 40px;
+}
+
+.image-wrap{
+  border-radius: 30px;
+}
